@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    max-width: 1520px;
+    padding: 0 50px;
+    width: 100%;
+}
+
+.welcome-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.data-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1420px;
+}
+
+.clm-dt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.dt-text {
+    font-size: 24px;
+    opacity: .6;
+}
+
+.clm-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    padding: 28px 40px;
+    max-width: 700px;
+    width: 100%;
+    min-height: 125px;
+    border-radius: 8px;
+    background-color: var(--background-color1);
+}
+
+.clm-block-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.config-bl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my-config-title {
+    margin-top: 50px;
+    font-size: var(--huge-font);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.my-config-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 8px;
+    padding: 0 40px;
+    background-color: var(--background-color1);
+}
+
+.config-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.title-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 0 ;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.code {
+    font-size: 18px;
+}
+
+.action-blck {
+    display: flex;
+    background-color: transparent;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.action {
+    width: 250px;
+    height: 100%;
+    max-height: 60px;
+    border-radius: 6px;
+    background-color: var(--button-color1);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .action {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .code {
+        font-size: 12px;
+    }
+
+    .my-config-block {
+        padding: 15px;
+    }
+
+    .action-blck {
+        max-width: 100px;
+    }
+
+    .title-block {
+        flex-direction: column;
+    }
+
+    .clm-block {
+        padding: 15px;
+    }
+}

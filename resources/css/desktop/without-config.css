@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    text-decoration: none;
+    color: var(--color-for-text);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Навигация и "Новая сборка"*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 25px;
+}
+
+.main-home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.search-input {
+    max-width: 1580px;
+    width: 100%;
+    background-color: #7A7A7C;
+    border-radius: 10px;
+    gap: 20px;
+    height: 100px;
+    padding: 0 40px;
+}
+
+.new-config {
+    width: 250px;
+    height: 60px;
+    border: 10px;
+    background-color: #FBC04C;
+    border-radius: 10px;
+}
+
+.new-config a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.search {
+    max-width: 1230px;
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    border-radius: 10px;
+}
+
+/*Блок, в котором нет ни одной готовой сборки*/
+
+.config-block {
+    max-width: 1580px;
+    width: 100%;
+    height: 480px;
+    background-color: #7A7A7C;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.background-config-block {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-huge {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title-medium {
+    font-size: 24px;
+    opacity: .6;
+}
+
+.create-config {
+    width: 400px;
+    height: 100px;
+    background-color: #FBC04C;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*Media-запросы*/
+
+@media (max-width:700px) {
+    #header {
+        min-height: 80px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    .search-input {
+        max-width: 331px;
+        width: 100%;
+        padding: 0 15px;
+        gap: 10px;
+        height: 75px;
+    }
+
+    .search {
+        max-width: 223px;
+        height: 50px;
+        width: 100%;
+    }
+
+    .new-config {
+        width: 60px;
+        height: 50px;
+    }
+
+    .create-config {
+        max-width: 175px;
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .title-huge {
+        font-size: 14px;
+    }
+
+    .title-medium {
+        font-size: 12px;
+    }
+
+    .config-block {
+        height: 235px;
+        padding: 20px;
+        max-width: 331px;
+        width: 100%;
+    }
+}
+
+/*Непонятно что*/
+
+#extension-dpfof {
+    display: none;
+}
