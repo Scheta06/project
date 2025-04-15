@@ -1,0 +1,25 @@
+@media (max-width:768px) {
+    main {
+        padding: 0;
+    }
+
+    input {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .bold-medium-font {
+        font-size: var(--mobile-huge-font);
+    }
+    
+    .join-button {
+        max-width: 200px;
+        height: 40px;
+        font-size: var(--mobile-medium-font);
+    }
+
+    .links a {
+        font-size: 14px;
+        max-width: 275px;
+    }
+}

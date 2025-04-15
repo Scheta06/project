@@ -1,0 +1,30 @@
+form {
+    gap: 25px;
+    max-width: 500px;
+}
+
+.input-section {
+    gap: 10px;
+}
+
+input {
+    width: 500px;
+    min-height: 40px;
+    border: 1px solid #A9A5A5;
+    padding: 0 20px;
+    font-size: var(--small-font);
+}
+
+.join-button {
+    max-width: 300px;
+    min-height: 60px;
+}
+
+.links {
+    gap: 15px;
+}
+
+.links a {
+    width: 500px;
+    min-height: 40px;
+}

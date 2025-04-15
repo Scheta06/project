@@ -1,0 +1,55 @@
+@media (max-width:768px) {
+    .container {
+        padding-top: 80px;   
+        padding-bottom: 60px;
+        min-height: calc(100vh - 140px);
+        overflow-y: auto;
+    }
+
+    p:first-of-type {
+        display: none;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .regular-medium-font {
+        font-size: var(--mobile-medium-font);
+        text-align: center;
+    }
+
+    .create-config-button {
+        max-width: 60px;
+        min-height: 50px;
+        font-size: 0;
+    }
+
+    .search-block {
+        padding: 12px 15px;
+        min-height: 75px;
+        flex-wrap: nowrap;
+    }
+
+    .search-input {
+        min-height: 50px;
+        padding: 0 25px;
+        font-size: var(--mobile-small-font);
+    }
+
+    .my-config-section {
+        padding: 15px;
+        min-height: 235px;
+    }
+
+    .my-config-pre-background {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .create-button {
+        max-width: 175px;
+        min-height: 60px;
+        font-size: var(--mobile-huge-font);
+    }
+}

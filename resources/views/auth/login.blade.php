@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite('resources/css/desktop/register.css')
+    <title>Login | ASMR</title>
+    @vite(['resources/css/duplicate-elements.css', 'resources/css/desktop/header-and-footer.css', 'resources/css/desktop/login.css', 'resources/css/desktop/without-config.css', 'resources/css/mobile/mobile-header-and-footer.css', 'resources/css/mobile/mobile-login.css', 'resources/css/mobile/mobile-without-config.css'])
 </head>
-<body>
-    <div class="container">
-    <div class="container center" id="modal">
+
+<body class="center">
+    <main class="column-display center">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -19,23 +19,27 @@
                 </ul>
             </div>
         @endif
-        <h1>Вход</h1>
-        <form action="{{ route('login') }}" method="POST">
+        <form method="POST" class="column-display center">
             @csrf
-            <div class="input-block">
-                <label for="name" class="title">Логин</label>
-                <input type="text" name="name"  required>
+            <h1>Авторизация</h1>
+            <div class="input-section column-display">
+                <label for="name" class="bold-medium-font">Логин</label>
+                <input type="text" name="name" class="small-border-radius" required>
             </div>
-            <div class="input-block">
-                <label for="password" class="title">Пароль</label>
-                <input type="password" name="password" required>
+            <div class="input-section column-display">
+                <label for="password" class="bold-medium-font">Пароль</label>
+                <input type="password" name="password" class=" small-border-radius" required>
             </div>
-            <div class="button-block">
-                <button type="submit" id="register-button">Войти</button>
-                <a href="{{ route('register') }}" class="center" >Нет аккаунта? Перейти к регистрации</a>
-                <a id="goBack-button" href="{{ route('home') }}" class="center" >Вернуться на главную страницу</a>
+            <button type="sumbit"
+                class="join-button mediun-border-radius  bold-small-font bright-button-style center full-width">Войти</button>
+            <div class="links column-display">
+                <a href="{{ route('registerForm') }}" class="bold-small-font mediun-border-radius center full-width">Нет
+                    аккаунта? Перейти к регистрации</a>
+                <a href="{{ route('home') }}" class="bold-small-font mediun-border-radius center full-width">Вернуться
+                    на главную страницу</a>
             </div>
         </form>
-    </div>
+    </main>
 </body>
+
 </html>

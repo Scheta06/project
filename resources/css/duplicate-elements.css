@@ -1,0 +1,214 @@
+/*Здесь находятся часто повторяемые на странице стили*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    gap: 100px;
+}
+
+main {
+    padding: 0 40px;
+    max-width: 1580px;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    /*Основные цвета проекта*/
+
+    --bright-yellow-color: #FBC04C;
+    --pale-yellow-color: #FDD17C;
+    --header-and-footer-background-color: #727B7A;
+    --block-background-color1: #D9D9D9;
+    --white-color: #fff;
+    --block-background-color2: #7A7A7C;
+    --block-background-color3: #F0F0F0;
+
+    /*Основные шрифты для desktop проекта*/
+
+    --huge-font: 30px;
+    --medium-font: 24px;
+    --small-font: 18px;
+    --description-font: 14px;
+
+    /*Основные шрифты для mobile проекта*/
+
+    --mobile-huge-font: 16px;
+    --mobile-medium-font: 14px;
+    --mobile-small-font: 12px;
+
+    /*Основные скругления в проекте*/
+
+    --huge-border-radius: 10px;
+    --medium-border-radius: 8px;
+    --small-border-radius: 6px;
+}
+
+/*Вся длина*/
+
+.full-width {
+    width: 100%
+}
+
+/*Основной стиль для заливки header и footer*/
+
+.partials-background {
+    background-color: var(--header-and-footer-background-color);
+}
+
+
+
+/*Скругления*/
+
+.huge-border-radius-with-color {
+    border-radius: var(--huge-border-radius);
+    background-color: var(--block-background-color2);
+}
+
+.huge-border-radius {
+    border-radius: var(--huge-border-radius);
+}
+
+.mediun-border-radius {
+    border-radius: var(--medium-border-radius);
+}
+
+.small-border-radius {
+    border-radius: var(--small-border-radius);
+}
+
+
+
+/*Стили для шрифтов*/
+
+.bold-huge-font {
+    font-size: var(--huge-font);
+    font-weight: bold;
+}
+
+.bold-medium-font {
+    font-size: var(--medium-font);
+    font-weight: bold;
+}
+
+.bold-small-font {
+    font-size: var(--small-font);
+    font-weight: bold;
+}
+
+.regular-huge-font {
+    font-size: var(--huge-font);
+}
+
+.regular-medium-font {
+    font-size: var(--medium-font);
+}
+
+.regular-small-font {
+    font-size: var(--small-font);
+}
+
+
+
+/*Расположение элемента по центру*/
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*Расположение элемента во всю длину*/
+
+.for-length {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*Расположение элемента по центру по оси Y и по всей длине по X*/
+
+.row-for-over-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/*Выстраивание элемента в колонну*/
+
+.column-display {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*Расположение элемента по центру по оси X и по всей длине по Y*/
+
+.column-for-over-length {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/*Стили для второстепенных кнопок*/
+
+.pale-button-style {
+    border-radius: var(--medium-border-radius);
+    background-color: var(--pale-yellow-color);
+}
+
+
+
+/*Стили для основных кнопок*/
+
+.bright-button-style {
+    border-radius: var(--medium-border-radius);
+    background-color: var(--bright-yellow-color);
+}
+
+
+
+/*Непонятно что*/
+
+#extension-dpfof {
+    display: none;
+}

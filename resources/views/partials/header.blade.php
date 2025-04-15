@@ -1,14 +1,21 @@
-<div id="header" class="for-over-length">
-    <div id="left-bar">
-        <a href="{{ route('home') }}" class="logotype huge-font action-block center">EHS</a>
-        <a href="{{ route('home') }}" id="catalog" class="action-block for-over-length">
+<header class="header partials-background row-for-over-length full-width">
+    <div class="left-header for-length">
+        <a href="{{ route('home') }}" class="logotype center bold-huge-font bright-button-style">
+            EHS
+        </a>
+        <a href="" class="catalog center bold-huge-font bright-button-style">
             Каталог
-            <img src="" alt="">
         </a>
     </div>
-    <div id="right-bar">
-        <a href="#">О нас</a>
-        <a href="#">Контакты</a>
-        <a href="{{ route('profile') }}">Профиль</a>
+    <div class="right-header for-length bold-medium-font">
+        <a href="">
+            О нас
+        </a>
+        <a href="">
+            Контакты
+        </a>
+        <a href="">
+            Профиль
+        </a>
     </div>
-</div>
+</header>

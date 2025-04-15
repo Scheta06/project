@@ -1,0 +1,54 @@
+body {
+    gap: 100px;
+}
+
+/*Шапака сайта*/
+
+.header {
+    min-height: 150px;
+    padding: 0 150px;
+    flex-wrap: wrap;
+}
+
+.left-header {
+    gap: 20px;
+}
+
+.logotype {
+    width: 150px;
+    height: 75px;
+}
+
+.catalog {
+    width: 250px;
+    height: 75px;
+}
+
+.right-header {
+    gap: 25px;
+}
+
+/*Подвал*/
+
+.mobile-footer {
+    display: none;
+}
+
+.up-footer {
+    width: 100%;
+    min-height: 250px;
+}
+
+.down-footer {
+    background-color: #000;
+    padding: 0 150px;
+    min-height: 120px;
+}
+
+.right-down-footer {
+    gap: 20px;
+}
+
+.right-down-footer a {
+    color: var(--white-color);
+}

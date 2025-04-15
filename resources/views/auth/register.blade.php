@@ -1,48 +1,48 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | ASMR</title>
+    @vite(['resources/css/duplicate-elements.css', 'resources/css/desktop/header-and-footer.css', 'resources/css/desktop/login.css', 'resources/css/desktop/without-config.css', 'resources/css/mobile/mobile-header-and-footer.css', 'resources/css/mobile/mobile-login.css', 'resources/css/mobile/mobile-without-config.css'])
+</head>
 
-        @vite('resources/css/desktop/register.css')
-    </head>
-
-    <body>
-        <div class="container center">
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+<body class="center">
+    <main class="column-display center">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <form method="POST" class="column-display center">
+            @csrf
             <h1>Регистрация</h1>
-            <form action="{{ route('register') }}" method="POST">
-                @csrf
-                <div class="input-block">
-                    <label for="name" class="title">Логин</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="input-block">
-                    <label for="email" class="title">E-mail</label>
-                    <input type="text" name="email" required>
-                </div>
-                <div class="input-block">
-                    <label for="password" class="title">Пароль</label>
-                    <input type="password" name="password" required>
-                </div>
-                <div class="button-block">
-                    <button type="submit" id="register-button">Регистрация</button>
-                    <a href="{{ route('login') }}" class="center" >Есть аккаунт? Перейти к авторизации</a>
-                    <a id="goBack-button" href="{{ route('home') }}" class="center" >Вернуться на главную страницу</a>
-                </div>
-            </form>
-        </div>
-    </body>
+            <div class="input-section column-display">
+                <label for="name" class="bold-medium-font">Логин</label>
+                <input type="text" name="name" class="small-border-radius" required>
+            </div>
+            <div class="input-section column-display">
+                <label for="email" class="bold-medium-font">E-mail</label>
+                <input type="email" name="email" class=" small-border-radius" required>
+            </div>
+            <div class="input-section column-display">
+                <label for="password" class="bold-medium-font">Пароль</label>
+                <input type="password" name="password" class=" small-border-radius" required>
+            </div>
+            <button type="sumbit"
+                class="join-button mediun-border-radius  bold-small-font bright-button-style center full-width">Войти</button>
+            <div class="links column-display">
+                <a href="{{ route('loginForm') }}" class="bold-small-font mediun-border-radius center full-width">Есть аккаунт? Перейти к авторизации</a>
+                <a href="{{ route('home') }}" class="bold-small-font mediun-border-radius center full-width">Вернуться на главную
+                    страницу</a>
+            </div>
+        </form>
+    </main>
+</body>
 
-    </html>
+</html>
