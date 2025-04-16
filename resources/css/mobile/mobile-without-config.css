@@ -1,7 +1,13 @@
 @media (max-width:768px) {
+    .main {
+        padding: 0;
+    }
+
     .container {
-        padding-top: 80px;   
+        padding-top: 80px;
         padding-bottom: 60px;
+        padding-left: 31px;
+        padding-right: 31px;
         min-height: calc(100vh - 140px);
         overflow-y: auto;
     }
@@ -39,12 +45,13 @@
 
     .my-config-section {
         padding: 15px;
-        min-height: 235px;
+        max-height: 235px;
+        height: 100%;
     }
 
     .my-config-pre-background {
-        height: auto;
-        max-height: 200px;
+        padding: 30px;
+        max-height: 185px;
     }
 
     .create-button {

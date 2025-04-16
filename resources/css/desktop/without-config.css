@@ -1,7 +1,6 @@
 /*Стили для секции поиска*/
 
 .main {
-    padding: 0 15px;
     max-width: 1620px;
     width: 100%;
 }
@@ -33,18 +32,19 @@
 
 .my-config-section {
     max-width: 1580px;
-    min-height: 480px;
+    max-height: 480px;
     padding: 40px;
     margin-top: 20px;
 }
 
 .my-config-pre-background {
-    min-height: 400px;
+    max-height: 400px;
     height: 100%;
     background-color: var(--block-background-color3);
     flex-direction: column;
     gap: 15px;
     font-weight: 400;
+    padding: 95px;
 }
 
 p:last-child {

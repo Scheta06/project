@@ -8,14 +8,12 @@
         </a>
     </div>
     <div class="right-header for-length bold-medium-font">
-        <a href="">
-            О нас
-        </a>
-        <a href="">
-            Контакты
-        </a>
-        <a href="">
-            Профиль
+        <a href="{{ route('profile') }}">
+            @if (Auth::check())
+                {{ $userData->name }}
+            @else
+                Профиль
+            @endif
         </a>
     </div>
 </header>

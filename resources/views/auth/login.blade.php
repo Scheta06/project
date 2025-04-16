@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | ASMR</title>
-    @vite(['resources/css/duplicate-elements.css', 'resources/css/desktop/header-and-footer.css', 'resources/css/desktop/login.css', 'resources/css/desktop/without-config.css', 'resources/css/mobile/mobile-header-and-footer.css', 'resources/css/mobile/mobile-login.css', 'resources/css/mobile/mobile-without-config.css'])
+    @vite(['resources/css/duplicate-elements.css','resources/css/desktop/login.css','resources/css/mobile/mobile-login.css'])
 </head>
 
 <body class="center">
-    <main class="column-display center">
+    <main class="main column-display center">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -19,7 +19,7 @@
                 </ul>
             </div>
         @endif
-        <form method="POST" class="column-display center">
+        <form method="POST" action="{{ route('login') }}" class="column-display center">
             @csrf
             <h1>Авторизация</h1>
             <div class="input-section column-display">

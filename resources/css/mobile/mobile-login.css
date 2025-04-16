@@ -1,6 +1,6 @@
 @media (max-width:768px) {
-    main {
-        padding: 0;
+    .main {
+        padding: 0 10px;
     }
 
     input {
@@ -11,14 +11,15 @@
     .bold-medium-font {
         font-size: var(--mobile-huge-font);
     }
-    
+
     .join-button {
         max-width: 200px;
-        height: 40px;
+        min-height: 40px;
         font-size: var(--mobile-medium-font);
     }
 
     .links a {
+        text-align: center;
         font-size: 14px;
         max-width: 275px;
     }

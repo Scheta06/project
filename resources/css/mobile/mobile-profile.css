@@ -1,0 +1,36 @@
+@media (max-width:768px) {
+    main.column-display {
+        max-width: 500px;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: var(--mobile-huge-font);
+        line-height: 20px;
+    }
+
+    .account-section {
+        flex-wrap: wrap;
+    }
+
+    .title {
+        font-size: var(--mobile-medium-font);
+    }
+
+    p:first-of-type {
+        display: block;
+    }
+
+    .block {
+        max-width: 500px;
+        width: 100%;
+        min-height: 90px;
+        font-size: var(--mobile-medium-font);
+        padding: 20px 15px;
+
+    }
+
+    .info {
+        gap: 20px;
+    }
+}

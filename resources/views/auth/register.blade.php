@@ -19,7 +19,7 @@
                 </ul>
             </div>
         @endif
-        <form method="POST" class="column-display center">
+        <form method="POST" action="{{ route('register') }}" class="main column-display center">
             @csrf
             <h1>Регистрация</h1>
             <div class="input-section column-display">

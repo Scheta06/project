@@ -2,7 +2,7 @@
 
 @section('content')
 <main class="main column-display">
-    <div class="search-section bold-huge-font ">
+    <div class="search-section bold-huge-font full-width">
         <p style="line-height: 50px;">Конфигурации компьютеров</p>
         <div class="search-block huge-border-radius-with-color row-for-over-length">
             <a href="#" class="create-config-button bright-button-style center bold-small-font full-width">

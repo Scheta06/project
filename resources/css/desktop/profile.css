@@ -1,0 +1,43 @@
+main.column-display.profile {
+    max-width: 1482px;
+    padding: 0 31px;
+}
+
+h1 {
+    line-height: 40px;
+}
+
+.account-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+    max-width: 1420px;
+}
+
+.account-block {
+    font-size: var(--small-font);
+    gap: 15px;
+    max-width: 700px;
+}
+
+.title {
+    opacity: .6;
+    line-height: 29px;
+}
+
+.block {
+    width: 100%;
+    min-height: 125px;
+    height: 100%;
+    background-color: var(--block-background-color1);
+    padding: 0 40px;
+}
+
+.info {
+    gap: 15px;
+}
+
+.user-info {
+    font-weight: bold;
+}
