@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/desktop/login.css',
                 'resources/css/desktop/without-config.css',
                 'resources/css/desktop/profile.css',
+                'resources/css/desktop/catalog.css',
                 'resources/css/mobile/mobile-header-and-footer.css',
                 'resources/css/mobile/mobile-login.css',
                 'resources/css/mobile/mobile-without-config.css',

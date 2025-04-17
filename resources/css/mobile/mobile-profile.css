@@ -1,5 +1,5 @@
 @media (max-width:768px) {
-    main.column-display {
+    main.column-display.profile {
         max-width: 500px;
         padding: 0;
     }
@@ -11,6 +11,10 @@
 
     .account-section {
         flex-wrap: wrap;
+    }
+
+    .account-block {
+        max-width: 500px;
     }
 
     .title {

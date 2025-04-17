@@ -1,0 +1,22 @@
+@media (max-width:768px) {
+    main.catalog {
+        padding: 0;
+        max-width: 313px;
+        width: 100%;
+    }
+
+    .component-block {
+        max-height: 180px;
+        max-width: 150px;
+        padding: 15px;
+    }
+
+    .component-block > img {
+        min-height: 120px;
+    }
+
+    .component-block > p {
+        margin-top: 10px;
+        font-size: var(--mobile-medium-font);
+    }
+}

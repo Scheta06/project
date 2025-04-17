@@ -3,7 +3,7 @@
         <a href="{{ route('home') }}" class="logotype center bold-huge-font bright-button-style">
             EHS
         </a>
-        <a href="" class="catalog center bold-huge-font bright-button-style">
+        <a href="{{ route('catalog') }}" class="catalog-link center bold-huge-font bright-button-style">
             Каталог
         </a>
     </div>

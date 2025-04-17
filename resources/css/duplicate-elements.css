@@ -79,7 +79,13 @@ button {
 /*Основной стиль для заливки header и footer*/
 
 .partials-background {
-    background-color: var(--header-and-footer-background-color);
+    background-color: var(--block-background-color1);
+}
+
+/*Основной стиль для background блоков*/
+
+.background-block-color {
+    background-color: var(--block-background-color2);
 }
 
 

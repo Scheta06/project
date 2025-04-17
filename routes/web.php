@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ChangePasswordController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CatalogController;
 use Illuminate\Support\Facades\Route;
 
 // АВТОРИЗАЦИЯ, РЕГИСТРАЦИЯ, СМЕНА ПАРОЛЯ И ВЫХОД
@@ -24,3 +25,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout'); // В
 //Элементы главной страницы
 
 Route::get('/', [HomeController::class, 'index'])->name('home'); // Главная страница
+
+Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog'); // Сраница каталога

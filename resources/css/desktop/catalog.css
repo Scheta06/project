@@ -1,0 +1,40 @@
+.catalog {
+    max-width: 1582px;
+    max-height: 950px;
+    padding: 0 31px;
+}
+
+.all-components-section {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.row-components {
+    max-width: 1520px;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.component-block {
+    max-height: 415px;
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.component-block > img {
+    max-width: 290px;
+    min-height: 290px;
+    background-color: var(--white-color);
+}
+
+.component-block > p {
+    opacity: 1;
+    line-height: 40px;
+    margin-top: 25px;
+    color: var(--white-color);
+    text-align: center;
+}
