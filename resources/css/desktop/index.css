@@ -1,0 +1,65 @@
+form.main-index {
+    max-width: 1520px;
+    width: 100%;
+}
+
+.left-bar {
+    order: 1;
+    max-width: 900px;
+}
+
+.configuration-components-section {
+    gap: 20px;
+    padding: 50px 40px;
+    margin-top: 40px;
+    width: 100%;
+    min-height: 880px;
+}
+
+.configuration-components-block {
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+    background-color: var(--block-background-color2);
+    padding: 0 30px;
+}
+
+.right-bar {
+    order: 2;
+    max-width: 500px;
+}
+
+.photo {
+    width: 100%;
+    min-height: 400px;
+    background-color: var(--block-background-color2);
+}
+
+.save-config__button {
+    width: 100%;
+    min-height: 50px;
+    background-color: var(--block-background-color2);
+}
+
+.action-button {
+    font-size: var(--small-font);
+    font-weight: bold;
+    opacity: .6;
+}
+
+.message-section {
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.title-of-configuration {
+    gap: 15px;
+}
+
+.title-of-configuration > input {
+    width: 100%;
+}
+
+.desctiption {
+    min-height: 120px;
+}

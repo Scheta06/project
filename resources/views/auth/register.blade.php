@@ -24,7 +24,7 @@
             <h1>Регистрация</h1>
             <div class="input-section column-display">
                 <label for="name" class="bold-medium-font">Логин</label>
-                <input type="text" name="name" class="small-border-radius" required>
+                <input type="text" name="name" value="{{ old('name') }}" class="small-border-radius" required>
             </div>
             <div class="input-section column-display">
                 <label for="email" class="bold-medium-font">E-mail</label>
@@ -38,7 +38,7 @@
                 class="join-button mediun-border-radius  bold-small-font bright-button-style center full-width">Войти</button>
             <div class="links column-display">
                 <a href="{{ route('loginForm') }}" class="bold-small-font mediun-border-radius center full-width">Есть аккаунт? Перейти к авторизации</a>
-                <a href="{{ route('home') }}" class="bold-small-font mediun-border-radius center full-width">Вернуться на главную
+                <a href="{{ route('index') }}" class="bold-small-font mediun-border-radius center full-width">Вернуться на главную
                     страницу</a>
             </div>
         </form>

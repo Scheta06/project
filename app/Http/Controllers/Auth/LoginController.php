@@ -19,7 +19,7 @@ class LoginController extends Controller
         ]);
 
         if(Auth::attempt($data)) {
-            return redirect()->route('home');
+            return redirect()->route('index');
         }
 
         return back()->withErrors([
@@ -30,6 +30,6 @@ class LoginController extends Controller
     public function logout (Request $request) {
         Auth::logout();
 
-        return redirect()->route ('home');
+        return redirect()->route ('index');
     }
 }

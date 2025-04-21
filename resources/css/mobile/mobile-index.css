@@ -1,0 +1,19 @@
+@media (max-width:768px) {
+    .configuration-components-section {
+        padding: 30px 20px;
+        flex-wrap: wrap;
+    }
+
+    .left-bar {
+        order: 2;
+    }
+
+    .right-bar {
+        order: 1;
+        max-width: 768px;
+    }
+
+    .configuration-components-block {
+        flex-wrap: wrap;
+    }
+}

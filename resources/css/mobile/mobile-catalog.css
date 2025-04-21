@@ -1,0 +1,41 @@
+@media (max-width:768px) {
+    .catalog {
+        max-width: 630px;
+    }
+
+    .all-components-section {
+        gap: 10px;
+    }
+
+    .component-block {
+        max-height: 180px;
+        max-width: 150px;
+        padding: 15px;
+    }
+
+    .component-block > img {
+        min-height: 120px;
+    }
+
+    .component-block > p {
+        margin-top: 10px;
+        font-size: var(--mobile-medium-font);
+        line-height: 20px;
+    }
+}
+
+@media (max-width:425px) {
+    .container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .catalog {
+        max-width: 320px;
+    }
+
+    .all-components-section {
+        gap: 20px;
+    }
+}

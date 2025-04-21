@@ -35,7 +35,7 @@
             <div class="links column-display">
                 <a href="{{ route('registerForm') }}" class="bold-small-font mediun-border-radius center full-width">Нет
                     аккаунта? Перейти к регистрации</a>
-                <a href="{{ route('home') }}" class="bold-small-font mediun-border-radius center full-width">Вернуться
+                <a href="{{ route('index') }}" class="bold-small-font mediun-border-radius center full-width">Вернуться
                     на главную страницу</a>
             </div>
         </form>

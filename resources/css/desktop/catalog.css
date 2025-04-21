@@ -1,0 +1,33 @@
+.catalog {
+    max-width: 1520px;
+    width: 100%;
+}
+
+.all-components-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.component-block {
+    max-height: 415px;
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.component-block > img {
+    max-width: 290px;
+    min-height: 290px;
+    background-color: var(--white-color);
+}
+
+.component-block > p {
+    opacity: 1;
+    line-height: 40px;
+    margin-top: 25px;
+    color: var(--white-color);
+    text-align: center;
+}

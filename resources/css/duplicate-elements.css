@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+
 * {
     margin: 0;
     border: 0;
@@ -29,6 +31,16 @@ h6 {
     margin: 0;
 }
 
+h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
 button {
     cursor: pointer;
 }
@@ -37,6 +49,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 31px;
+    padding-right: 31px;
 }
 
 :root {
@@ -44,17 +58,17 @@ button {
 
     --bright-yellow-color: #FBC04C;
     --pale-yellow-color: #FDD17C;
-    --header-and-footer-background-color: #727B7A;
-    --block-background-color1: #D9D9D9;
+    --header-and-footer-background-color: #424242;
+    --block-background-color1: #9E9E9E;
     --white-color: #fff;
-    --block-background-color2: #7A7A7C;
-    --block-background-color3: #F0F0F0;
+    --block-background-color2: #F5F5F5;
+    --block-background-color3: #424242;
 
     /*Основные шрифты для desktop проекта*/
 
     --huge-font: 30px;
     --medium-font: 24px;
-    --small-font: 18px;
+    --small-font: 20px;
     --description-font: 14px;
 
     /*Основные шрифты для mobile проекта*/
@@ -70,10 +84,24 @@ button {
     --small-border-radius: 6px;
 }
 
+/*Главный отступ*/
+
+.first-gap {
+    gap: 40px;
+}
+
+.secong-gap {
+    gap: 20px;
+}
+
 /*Вся длина*/
 
 .full-width {
     width: 100%
+}
+
+.full-height {
+    height: 100%;
 }
 
 /*Основной стиль для заливки header и footer*/
@@ -82,14 +110,15 @@ button {
     background-color: var(--header-and-footer-background-color);
 }
 
+/*Основной стиль для background блоков*/
+
+.background-block-color {
+    background-color: var(--block-background-color1);
+}
+
 
 
 /*Скругления*/
-
-.huge-border-radius-with-color {
-    border-radius: var(--huge-border-radius);
-    background-color: var(--block-background-color2);
-}
 
 .huge-border-radius {
     border-radius: var(--huge-border-radius);

@@ -1,9 +1,4 @@
 @media (max-width:768px) {
-    main.column-display {
-        max-width: 500px;
-        padding: 0;
-    }
-
     h1 {
         font-size: var(--mobile-huge-font);
         line-height: 20px;
