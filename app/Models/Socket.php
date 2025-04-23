@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Processor;
 
 class Socket extends Model
 {
@@ -14,7 +15,7 @@ class Socket extends Model
     protected $guarded = [];
 
     public function proccessor() {
-        return $this->hasMany(Proccessor::class, 'socket_id');
+        return $this->hasMany(Processor::class, 'socket_id');
     }
 
     public function motherboard() {

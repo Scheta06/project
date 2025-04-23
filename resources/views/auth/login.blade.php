@@ -9,7 +9,7 @@
 </head>
 
 <body class="center">
-    <main class="main column-display center">
+    <main class="main-auth column-display center full-width">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -19,14 +19,14 @@
                 </ul>
             </div>
         @endif
-        <form method="POST" action="{{ route('login') }}" class="column-display center">
+        <form method="POST" action="{{ route('login') }}" class="column-display center full-width">
             @csrf
             <h1>Авторизация</h1>
-            <div class="input-section column-display">
+            <div class="input-section column-display full-width">
                 <label for="name" class="bold-medium-font">Логин</label>
                 <input type="text" name="name" class="small-border-radius" required>
             </div>
-            <div class="input-section column-display">
+            <div class="input-section column-display full-width">
                 <label for="password" class="bold-medium-font">Пароль</label>
                 <input type="password" name="password" class=" small-border-radius" required>
             </div>

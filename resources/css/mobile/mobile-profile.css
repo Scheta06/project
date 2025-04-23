@@ -1,4 +1,8 @@
 @media (max-width:768px) {
+    main.main-profile {
+        max-width: 500px;
+    }
+    
     h1 {
         font-size: var(--mobile-huge-font);
         line-height: 20px;

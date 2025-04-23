@@ -3,7 +3,7 @@ form.main-index {
     width: 100%;
 }
 
-.left-bar {
+.main-left-bar {
     order: 1;
     max-width: 900px;
 }
@@ -24,12 +24,12 @@ form.main-index {
     padding: 0 30px;
 }
 
-.right-bar {
+.main-right-bar {
     order: 2;
     max-width: 500px;
 }
 
-.photo {
+.main-photo {
     width: 100%;
     min-height: 400px;
     background-color: var(--block-background-color2);

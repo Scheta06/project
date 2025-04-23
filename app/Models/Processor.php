@@ -3,35 +3,35 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Configuration;
 
 class Processor extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
-        'id',
         'title',
         'description',
+        'base_frequency',
+        'max_frequency',
         'count_of_cores',
         'count_of_streams',
         'tdp',
-        
     ];
 
     protected $guarded = [
+        'id',
         'socket_id',
-        'frequency_of_processor_id',
         'vendor_id',
     ];
 
     public function configurations() {
-        return $this->hasMany(Configurations::class, 'processor_id');
+        return $this->hasMany(Configuration::class, 'processor_id');
     }
 
     public function socket() {
         return $this->belongsTo(Socket::class);
-    }
-
-    public function frequencyOfProccessor() {
-        return $this->belongsTo(FrequencyOfProccessor::class);
     }
 
     public function vendor() {

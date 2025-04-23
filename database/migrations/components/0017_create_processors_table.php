@@ -20,9 +20,8 @@ return new class extends Migration
             $table->unsignedInteger('count_of_cores');
             $table->unsignedInteger('count_of_streams');
             $table->unsignedInteger('tdp');
+
             
-            
-            $table->foreignId('frequency_of_processor_id')->references('id')->on('frequency_of_proccessors')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('socket_id')->references('id')->on('sockets')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('vendor_id')->references('id')->on('vendors')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();

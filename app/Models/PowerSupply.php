@@ -3,12 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Configuration;
 
-class Casing extends Model
+class PowerSupply extends Model
 {
     protected $fillable = [
         'title',
         'description',
+        'power',
     ];
 
     protected $guarded = [
@@ -17,7 +19,7 @@ class Casing extends Model
     ];
 
     public function configuration() {
-        return $this->hasMany(Configuration::class, 'case_id');
+        return $this->hasMany(Configuration::class, 'motherboard_id');
     }
 
     public function formFactor() {

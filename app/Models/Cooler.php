@@ -3,30 +3,27 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Configuration;
 
-class Storage extends Model
+class Cooler extends Model
 {
     protected $fillable = [
-        'id',
         'title',
         'description',
-        'reading_rate',
-        'recording_rate',
-        'max_resource',
+        'power',
+        'min_performance',
+        'max_performance',
+
     ];
 
-    protected $hidden = [];
-
     protected $guarded = [
-        'size_id',
         'vendor_id',
     ];
 
-    
-    public function sizeOfStorage() {
-        return $this->belongsTo(SizeOfStorage::class);
+    public function configuration() {
+        return $this->hasMany(Configuration::class, 'cooler_id');
     }
-    
+
     public function vendor() {
         return $this->belongsTo(Vendor::class);
     }

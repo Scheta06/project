@@ -4,11 +4,11 @@
         flex-wrap: wrap;
     }
 
-    .left-bar {
+    .main-left-bar {
         order: 2;
     }
 
-    .right-bar {
+    .main-right-bar {
         order: 1;
         max-width: 768px;
     }

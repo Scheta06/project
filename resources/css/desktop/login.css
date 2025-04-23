@@ -1,6 +1,10 @@
+.main-auth {
+    max-width: 500px;
+    margin: 0 30px;
+}
+
 form {
     gap: 25px;
-    max-width: 500px;
 }
 
 .input-section {
@@ -8,8 +12,8 @@ form {
 }
 
 input {
-    width: 500px;
-    min-height: 50px;
+    width: 100%;
+    min-height: 40px;
     border: 1px solid #A9A5A5;
     padding: 0 20px;
     font-size: var(--small-font);

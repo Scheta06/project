@@ -1,5 +1,11 @@
+@media (max-width:425px) {
+    main.main-catalog {
+        width: 320px;
+    }
+}
+
 @media (max-width:768px) {
-    .catalog {
+    main.main-catalog {
         max-width: 630px;
     }
 
@@ -26,16 +32,16 @@
 
 @media (max-width:425px) {
     .container {
-        max-width: 100%;
         padding-left: 0;
         padding-right: 0;
     }
-
-    .catalog {
-        max-width: 320px;
-    }
-
     .all-components-section {
         gap: 20px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1440px) {
+    main.main-catalog {
+        max-width: 1130px;
     }
 }

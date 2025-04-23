@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="main-index column-display profile full-width">
+    <main class="main-profile column-display profile full-width">
         <h1>Добро пожаловать, {{ $userData->name }}!</h1>
         <div class="account-section full-width">
             <div class="account-block column-display full-width">

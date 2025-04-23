@@ -5,11 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-namespace App\Models\users;
-namespace App\Models\specifications;
-namespace App\Models\specifications;
-namespace App\Models\components;
-
 class Configuration extends Model
 {
     use SoftDeletes;
@@ -35,7 +30,7 @@ class Configuration extends Model
     }
 
     public function proccessor() {
-        return $this->belongsTo(Proccessor::class);
+        return $this->belongsTo(Processor::class);
     }
 
     public function motherboard() {

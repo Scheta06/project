@@ -12,11 +12,11 @@ class Vendor extends Model
     ];
 
     protected $guarded = [
-        
+
     ];
 
     public function processor() {
-        return $this->hasMany(Proccessor::class, 'vendor_id');
+        return $this->hasMany(Processor::class, 'vendor_id');
     }
 
     public function motherboard() {

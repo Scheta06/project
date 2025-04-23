@@ -3,26 +3,29 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\components\Configuration;
 
-class PowerSupply extends Model
+class Storage extends Model
 {
     protected $fillable = [
+        'id',
         'title',
         'description',
-        'power',
+        'reading_rate',
+        'recording_rate',
+        'max_resource',
     ];
 
+    protected $hidden = [];
+
     protected $guarded = [
-        'form_factor_id',
+        'size_id',
         'vendor_id',
     ];
 
-    public function configuration() {
-        return $this->hasMany(Configuration::class, 'motherboard_id');
-    }
 
-    public function formFactor() {
-        return $this->belongsTo(FormFactor::class);
+    public function sizeOfStorage() {
+        return $this->belongsTo(SizeOfStorage::class);
     }
 
     public function vendor() {

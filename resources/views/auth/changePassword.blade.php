@@ -9,7 +9,7 @@
 </head>
 
 <body class="center">
-    <main class="main column-display center">
+    <main class="main-auth column-display center full-width">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -19,18 +19,18 @@
                 </ul>
             </div>
         @endif
-        <form method="POST" action="{{ route('changePassword') }}" class="column-display center">
+        <form method="POST" action="{{ route('changePassword') }}" class="column-display center full-width">
             @csrf
             <h1>Смена пароля</h1>
-            <div class="input-section column-display">
+            <div class="input-section column-display full-width">
                 <label for="current_password" class="bold-medium-font">Текущий пароль</label>
                 <input type="password" name="current_password" class="small-border-radius" required>
             </div>
-            <div class="input-section column-display">
+            <div class="input-section column-display full-width">
                 <label for="new_password" class="bold-medium-font">Новый пароль</label>
                 <input type="password" name="new_password" class=" small-border-radius" required>
             </div>
-            <div class="input-section column-display">
+            <div class="input-section column-display full-width">
                 <label for="new_password_confirmation" class="bold-medium-font">Подтверждение нового пароля</label>
                 <input type="password" name="new_password_confirmation" class="small-border-radius" required>
             </div>

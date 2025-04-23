@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Configuration;
 
 class Motherboard extends Model
 {
@@ -27,7 +28,7 @@ class Motherboard extends Model
     public function socket() {
         return $this->belongsTo(Socket::class);
     }
-    
+
     public function chipset() {
         return $this->belongsTo(Chipset::class);
     }
@@ -43,7 +44,7 @@ class Motherboard extends Model
     public function typeOfMemory() {
         return $this->belongsTo(TypeOfMemory::class);
     }
-    
+
     public function vendor() {
         return $this->belongsTo(Vendor::class);
     }

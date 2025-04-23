@@ -1,3 +1,7 @@
+main.main-profile {
+    max-width: 1420px;
+}
+
 h1 {
     line-height: 40px;
 }
@@ -25,7 +29,7 @@ h1 {
     width: 100%;
     min-height: 125px;
     height: 100%;
-    background-color: var(--block-background-color1);
+    background-color: var(--block-background-color2);
     padding: 0 40px;
 }
 

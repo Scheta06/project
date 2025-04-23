@@ -3,24 +3,26 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Configuration;
 
-class Cooler extends Model
+class Casing extends Model
 {
     protected $fillable = [
         'title',
         'description',
-        'power',
-        'min_performance',
-        'max_performance',
-        
     ];
 
     protected $guarded = [
+        'form_factor_id',
         'vendor_id',
     ];
 
     public function configuration() {
-        return $this->hasMany(Configuration::class, 'cooler_id');
+        return $this->hasMany(Configuration::class, 'case_id');
+    }
+
+    public function formFactor() {
+        return $this->belongsTo(FormFactor::class);
     }
 
     public function vendor() {

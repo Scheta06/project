@@ -48,6 +48,6 @@ class User extends Authenticatable
     }
 
     public function configurations() {
-        return $this->hasMany(Configurations::class, 'user_id');
+        return $this->hasMany(Configuration::class, 'user_id');
     }
 }

@@ -6,7 +6,6 @@ use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CatalogController;
-use App\Http\Controllers\Components\ProcessorController;
 use Illuminate\Support\Facades\Route;
 
 // АВТОРИЗАЦИЯ, РЕГИСТРАЦИЯ, СМЕНА ПАРОЛЯ И ВЫХОД
@@ -26,9 +25,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout'); // Выход get
 });
 
-//Элементы главной страницы
+// ГЛАВНАЯ СТРАНИЦА, СТРАНИЦА КАТАЛОГА, СТРАНИЦА ТОВАРОВ, СТРАНИЦА ПРОСМОТРА ТОВАРА
 
 Route::get('/', [HomeController::class, 'index'])->name('index'); // Главная страница
 
 Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog'); //Страница каталога
-Route::get('/catalog/processors', [ProcessorController::class, 'index'])->name('processors'); //Страница процессоров
+
+Route::get('/catalog/{type}', [CatalogController::class, 'show']); //Страница товаров

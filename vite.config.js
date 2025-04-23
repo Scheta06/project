@@ -18,8 +18,8 @@ export default defineConfig({
                 'resources/css/mobile/mobile-login.css',
                 'resources/css/mobile/mobile-profile.css',
                 'resources/css/mobile/mobile-catalog.css',
-                'resources/css/desktop/producs.css',
-                'resources/css/mobile/mobile-producs.css',
+                'resources/css/desktop/all-producs.css',
+                'resources/css/mobile/mobile-all-products.css'
             ],
             refresh: true,
         }),
