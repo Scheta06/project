@@ -13,10 +13,8 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom([
             'database/migrations/users',
-            'database/migrations/specifications',
             'database/migrations/specifications/size',
-            'database/migrations/specifications/form',
-            'database/migrations/specifications/frequencies',
+            'database/migrations/specifications',
             'database/migrations/components',
         ]);
     }

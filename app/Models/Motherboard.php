@@ -4,9 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Configuration;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Motherboard extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'title',
         'description',
@@ -15,9 +18,9 @@ class Motherboard extends Model
     protected $guarded = [
         'socket_id',
         'chipset_id',
-        'form_factor_id',
+        'form_id',
         'express_version_id',
-        'type_of_memory',
+        'type_of_memory_id',
         'vendor_id',
     ];
 

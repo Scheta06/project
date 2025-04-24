@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('casings', function (Blueprint $table) {
+        Schema::create('power_supplies', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->integer('power');
 
-            
-            $table->foreignId('form_factor_id')->references('id')->on('form_factors')->cascadeOnUpdate()->cascadeOnDelete();
+
+            $table->foreignId('form_id')->references('id')->on('form_factors')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('vendor_id')->references('id')->on('vendors')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('casings');
+        Schema::dropIfExists('power_supplies');
     }
 };

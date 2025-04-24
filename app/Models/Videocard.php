@@ -16,7 +16,7 @@ class Videocard extends Model
 
     protected $hidden = [
         'microarchitecture_id',
-        'express_version_id',
+        // 'express_version_id',
         'size_of_memory_id',
         'type_of_memory',
         'vendor_id',

@@ -2,17 +2,19 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class TypeOfMemory extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
-        'id',
         'title',
     ];
 
     protected $guarded = [
-        
+        'id'
     ];
 
     public function motherboard() {
