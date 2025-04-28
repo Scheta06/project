@@ -23,22 +23,7 @@
             <div class="right-bar full-width column-display">
                 <h1>{{ $componentData }}</h1>
                 <div class="products-section column-display mediun-border-radius">
-                    @foreach ($componentModel as $value)
-                    <div class="products-block for-length">
-                        <div class="photo small-border-radius"></div>   
-                        <div class="desctiption small-border-radius full-width center">
-                            {{ $value->vendor->title }} {{ $value->title }} [{{ $value->socket->title }}, {{ $value->base_frequency }}*{{ $value->count_of_cores }}]
-                        </div>
-                        <div class="action-section column-display full-width">
-                            <div class="action-link pale-button-style center">
-                                Подробнее
-                            </div>
-                            <div class="action-link pale-button-style center">
-                                Добавить
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
+                    @yield('product-block')
                 </div>
             </div>
         </main>

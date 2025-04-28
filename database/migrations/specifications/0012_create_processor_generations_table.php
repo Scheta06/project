@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('size_of_random_access_memories', function (Blueprint $table) {
+        Schema::create('processor_generations', function (Blueprint $table) {
             $table->id();
-            $table->float('size');
+            $table->string('title');
+            $table->enum('type', ['core', 'celeron', 'ryzen', 'athlon']);
             $table->timestamps();
         });
     }
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('size_of_random_access_memories');
+        Schema::dropIfExists('processor_generations');
     }
 };

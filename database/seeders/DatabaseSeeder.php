@@ -19,19 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            /*Работают*/
-
-            // UserSeeder::class,
-            // SocketSeeder::class,
-            // VendorSeeder::class,
-            // ChipsetSeeder::class,
-            // ProcessorSeeder::class,
-
-            /*Не работают*/
-
-            ExpressVersion::class,
-            // FormFactor::class,
-            // Motherboard::class,
+            UserSeeder::class
         ]);
     }
 }

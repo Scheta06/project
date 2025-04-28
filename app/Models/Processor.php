@@ -37,4 +37,8 @@ class Processor extends Model
     public function vendor() {
         return $this->belongsTo(Vendor::class);
     }
+
+    public function processorGeneration() {
+        return $this->belongsTo(ProcessorGeneration::class);
+    }
 }

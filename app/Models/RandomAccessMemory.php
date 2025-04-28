@@ -24,8 +24,8 @@ class RandomAccessMemory extends Model
         return $this->hasMany(Configuration::class, 'random_access_memory_id');
     }
 
-    public function sizeOfRandomAccessMemory() {
-        return $this->belogsTo(SizeOfRandomAccessMemory::class);
+    public function memoryCapacity() {
+        return $this->belogsTo(MemoryCapacity::class);
     }
 
     public function frequencyOfRandomAccessMemory() {

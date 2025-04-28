@@ -20,7 +20,7 @@ return new class extends Migration
             $table->float('max_resource');
 
 
-            $table->foreignId('size_of_memory_id')->references('id')->on('size_of_storages')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('memory_capacity_id')->references('id')->on('memory_capacities')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('vendor_id')->references('id')->on('vendors')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });

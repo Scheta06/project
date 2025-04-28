@@ -16,7 +16,7 @@ class Videocard extends Model
 
     protected $hidden = [
         'microarchitecture_id',
-        // 'express_version_id',
+        'express_version_id',
         'size_of_memory_id',
         'type_of_memory',
         'vendor_id',
@@ -34,8 +34,8 @@ class Videocard extends Model
         return $this->belongsTo(ExpressVersion::class);
     }
 
-    public function sizeOfVideoсard() {
-        return $this->belongsTo(SizeOfVideoсard::class);
+    public function memoryCapacity() {
+        return $this->belogsTo(MemoryCapacity::class);
     }
 
     public function typeOfMemory() {

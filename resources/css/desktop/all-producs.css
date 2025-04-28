@@ -58,6 +58,11 @@ input.sorting-input {
     background-color: var(--white-color);
     font-size: var(--medium-font);
     text-transform: uppercase;
+    padding-left: 50px;
+}
+
+.desctiption.center {
+    justify-content: start;
 }
 
 .action-section {

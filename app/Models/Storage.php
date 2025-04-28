@@ -24,8 +24,8 @@ class Storage extends Model
     ];
 
 
-    public function sizeOfStorage() {
-        return $this->belongsTo(SizeOfStorage::class);
+    public function memoryCapacity() {
+        return $this->belogsTo(MemoryCapacity::class);
     }
 
     public function vendor() {

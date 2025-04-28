@@ -54,31 +54,29 @@ class CatalogController extends Controller
 
         switch ($value) {
             case 'processors':
-                $componentModel = Processor::with(['vendor', 'socket'])->get();
-                break;
+                $componentModel = Processor::with(['processorGeneration', 'vendor', 'socket'])->get();
+                return view('components.processor', compact('userData', 'componentData', 'componentModel'));
             case 'motherboards':
-                $componentModel = Motherboard::all();
-                break;
+                $componentModel = Motherboard::with(['configuration', 'socket', 'chipset', 'formFactor', 'expressVersion', 'typeOfMemory', 'vendor'])->get();
+                return view('components.motherboard', compact('userData', 'componentData', 'componentModel'));
             case 'coolers':
-                $componentModel = Cooler::all();
-                break;
+                $componentModel = Cooler::with(['configuration', 'vendor'])->get();
+                return view('components.cooler', compact('userData', 'componentData', 'componentModel'));
             case 'storages':
-                $componentModel = Storage::all();
-                break;
+                $componentModel = Storage::with(['sizeOfStorage', 'vendor'])->get();
+                return view('components.storage', compact('userData', 'componentData', 'componentModel'));
             case 'random_access_memory':
-                $componentModel = RandomAccessMemory::all();
-                break;
+                $componentModel = RandomAccessMemory::with(['configuration', 'frequencyOfRandomAccessMemory', 'typeOfRandomAccessMemory', 'vendor'])->get();
+                return view('components.randomAccessMemory', compact('userData', 'componentData', 'componentModel'));
             case 'videocards':
-                $componentModel = Videocard::all();
-                break;
+                $componentModel = Videocard::with(['configuration', 'microarchitecture', 'expressVersion', 'sizeOfVideoсard', 'typeOfMemory', 'vendor'])->get();
+                return view('components.storage', compact('userData', 'componentData', 'componentModel'));
             case 'psu':
                 $componentModel = PowerSupply::all();
                 break;
             case 'cases':
-                $componentModel = Casing::all();
-                break;
+                $componentModel = Casing::with(['configuration', 'formFactor', 'vendor'])->get();
+                return view('components.storage', compact('userData', 'componentData', 'componentModel'));
         }
-
-        return view('layouts.category', compact('userData', 'componentData', 'componentModel'));
     }
 }
