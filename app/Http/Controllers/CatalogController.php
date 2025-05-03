@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Casing;
-
+use App\Models\Cooler;
 use App\Models\Motherboard;
 use App\Models\PowerSupply;
 use App\Models\Processor;
@@ -11,44 +11,35 @@ use App\Models\Storage;
 use App\Models\Videocard;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Cooler;
 
 class CatalogController extends Controller
 {
+    public $typeOfComponents = [
+        'processors'           => 'Процессоры',
+        'motherboards'         => 'Материнские платы',
+        'coolers'              => 'Кулеры',
+        'storages'             => 'Хранилища',
+        'random_access_memory' => 'Оперативная память',
+        'videocards'           => 'Видеокарты',
+        'psu'                  => 'Блоки питания',
+        'cases'                => 'Корпусы',
+    ];
+
     public function index()
     {
         $userData = Auth::user();
 
-        $typeOfComponents = [
-            'processors'           => 'Процессоры',
-            'motherboards'         => 'Материнские платы',
-            'coolers'              => 'Кулеры',
-            'storages'             => 'Хранилища',
-            'random_access_memory' => 'Оперативная память',
-            'videocards'           => 'Видеокарты',
-            'psu'                  => 'Блоки питания',
-            'cases'                => 'Корпусы',
-        ];
-
-        return view('catalog', compact('userData', 'typeOfComponents'));
+        return view('category', [
+            'userData'         => $userData,
+            'typeOfComponents' => $this->typeOfComponents,
+        ]);
     }
 
     public function show($value)
     {
         $userData = Auth::user();
 
-        $typeOfComponents = [
-            'processors'           => 'Процессоры',
-            'motherboards'         => 'Материнские платы',
-            'coolers'              => 'Кулеры',
-            'storages'             => 'Хранилища',
-            'random_access_memory' => 'Оперативная память',
-            'videocards'           => 'Видеокарты',
-            'psu'                  => 'Блоки питания',
-            'cases'                => 'Корпусы',
-        ];
-
-        $componentData = $typeOfComponents[$value];
+        $componentData = $this->typeOfComponents[$value];
 
         $componentModel = [];
 
@@ -78,5 +69,9 @@ class CatalogController extends Controller
                 $componentModel = Casing::with(['configuration', 'formFactor', 'vendor'])->get();
                 return view('components.storage', compact('userData', 'componentData', 'componentModel'));
         }
+    }
+
+    public function showProduct() {
+        return view('products');
     }
 }

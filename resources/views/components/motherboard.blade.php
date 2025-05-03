@@ -1,4 +1,4 @@
-@extends('layouts.category')
+@extends('layouts.catalog')
 
 @section('product-block')
 

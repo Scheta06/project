@@ -1,4 +1,4 @@
-@extends('layouts.category')
+@extends('layouts.catalog')
 
 @section('product-block')
 
@@ -16,7 +16,7 @@
             ]
         </div>
         <div class="action-section column-display full-width">
-            <a href="#" class="action-link pale-button-style center">
+            <a href="{{ route('showProduct', ['type' => 'processors', 'id' => $item->id]) }}" class="action-link pale-button-style center">
                 Подробнее
             </a>
             <a href="#" class="action-link pale-button-style center">
