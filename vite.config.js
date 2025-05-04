@@ -19,7 +19,10 @@ export default defineConfig({
                 'resources/css/mobile/mobile-profile.css',
                 'resources/css/mobile/mobile-catalog.css',
                 'resources/css/desktop/all-producs.css',
-                'resources/css/mobile/mobile-all-products.css'
+                'resources/css/mobile/mobile-all-products.css',
+                'resources/css/desktop/admin.css',
+                'resources/css/desktop/new-product.css',
+                'resources/css/desktop/card.css'
             ],
             refresh: true,
         }),

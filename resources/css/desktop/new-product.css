@@ -1,0 +1,24 @@
+.category-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1090px;
+}
+
+.item-block {
+    min-width: 250px;
+    min-height: 300px;
+    padding: 20px;
+    align-items: center;
+}
+
+.item-block .image {
+   max-height: 210px;
+   width: 100%;
+   background-color: white;
+}
+
+.item-block p {
+    color: white;
+}

@@ -26,6 +26,11 @@
                         <div class="info-row for-length full-width">
                             <a href="{{ route('changePasswordForm') }}">Изменить пароль</a>
                         </div>
+                        @if(Auth::user()->role === 'admin')
+                        <div class="info-row for-length full-width">
+                            <a href="{{ route('admin.panel') }}">Админ-панель</a>
+                        </div>
+                        @endif
                         <div class="info-row for-length full-width">
                             <a href="{{ route('logout') }}">Выйти из аккаунта</a>
                         </div>
