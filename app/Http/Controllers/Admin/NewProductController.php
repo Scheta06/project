@@ -9,14 +9,14 @@ use App\Http\Controllers\Controller;
 class NewProductController extends Controller
 {
     protected $typeOfComponents = [
-        'processors'           => 'Процессоры',
-        'motherboards'         => 'Материнские платы',
-        'coolers'              => 'Кулеры',
-        'storages'             => 'Хранилища',
+        'processor'           => 'Процессор',
+        'motherboard'         => 'Материнская плата',
+        'cooler'              => 'Кулер',
+        'storage'             => 'Хранилище',
         'random_access_memory' => 'Оперативная память',
-        'videocards'           => 'Видеокарты',
-        'psu'                  => 'Блоки питания',
-        'cases'                => 'Корпусы',
+        'videocard'           => 'Видеокарта',
+        'psu'                  => 'Блок питания',
+        'case'                => 'Корпус',
     ];
 
     public function index() {
@@ -24,7 +24,7 @@ class NewProductController extends Controller
     }
 
     public function show() {
-        return view();
+        return view('admin.show');
     }
 
     public function create(Request $request, $type) {

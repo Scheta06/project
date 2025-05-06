@@ -37,7 +37,8 @@ Route::middleware(['admin'])->group(function() {
     Route::get('admin-panel/all-products', [ProductController::class, 'index'])->name('admin.allProduct'); // Страница отображения всех товаров в базе данных GET
 
     Route::get('/admin-panel/new-product', [NewProductController::class, 'index'])->name('admin.newProduct'); // Страница выбора категории для создания нового товара GET
-    Route::post('/admin-panel/new-product/{type}', [NewProductController::class, 'create'])->name('admin.createProduct'); // Страница для создания товара по определенной категории POST
+
+    Route::get('/admin-panel/new-product/{type}', [NewProductController::class, 'create'])->name('admin.createProduct'); // Страница для создания товара по определенной категории POST
 });
 
 // ГЛАВНАЯ СТРАНИЦА, СТРАНИЦА КАТАЛОГА, СТРАНИЦА ТОВАРОВ, СТРАНИЦА ПРОСМОТРА ТОВАРА

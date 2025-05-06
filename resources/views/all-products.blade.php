@@ -9,12 +9,15 @@
                     <div class="desctiption small-border-radius full-width center">
                         {{ $item->vendor->title }}
                         {{ $item->processorGeneration->type }}
+                        @if($item->vendor->title === 'intel')
+                        {{ $item->processorGeneration->title }}-{{ $item->title }}
+                        @else
                         {{ $item->processorGeneration->title }}
                         {{ $item->title }}
-                        [
-                        {{ $item->socket->title }},
-                        {{ $item->base_frequency }}*{{ $item->count_of_cores }}
-                        ]
+                        @endif
+                        [{{ $item->socket->title }},
+                        {{ $item->base_frequency }}*{{ $item->count_of_cores }},
+                        TDP {{$item->tdp}} вт]
                     </div>
                     <div class="action-section column-display full-width">
                         <a href="{{ route('showProduct', ['type' => $type, 'id' => $item->id]) }}"

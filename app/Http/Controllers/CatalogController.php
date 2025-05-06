@@ -110,12 +110,15 @@ class CatalogController extends Controller
     {
         $userData = Auth::user();
 
-        $data = 0;
+        $data = null;
 
         switch ($type) {
 
             case 'processors':
                 $data = $this->processorsData->findOrFail($id);
+                break;
+            case 'motherboards':
+                $data = $this->motherboardsData->findOrFail($id);
                 break;
         }
 
