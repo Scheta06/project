@@ -1,6 +1,10 @@
 <footer class="footer column-for-over-length">
     <div class="mobile-footer partials-background row-for-over-length">
+<<<<<<< HEAD
         <a href="{{ route('catalog') }}">Каталог</a>
+=======
+        <a href="{{route('catalog')}}">Каталог</a>
+>>>>>>> 315da151fefd2ad9d4339cad06aa219d5ba498c4
         <a href="{{ route('index') }}">Дом</a>
         <a href="{{ route('profile') }}">Профиль</a>
     </div>

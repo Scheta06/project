@@ -26,6 +26,8 @@ header.admin-header {
 .admin-action-block {
     width: 100%;
     height: 100px;
+    background-color: var(--header-and-footer-background-color);
+    color: var(--white-color);
 }
 
 .go-back {

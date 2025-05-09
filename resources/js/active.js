@@ -1,7 +1,7 @@
-const actionBlock = document.querySelectorAll('.admin-action-block');
+const actionBlocks = document.querySelectorAll('.admin-action-block');
 
-actionBlock.forEach((item)=> {
-    item.addEventListener('click', function() {
+actionBlocks.forEach(block => {
+    block.addEventListener('click', () => {
         
     });
 });

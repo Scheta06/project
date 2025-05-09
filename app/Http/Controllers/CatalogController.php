@@ -110,7 +110,7 @@ class CatalogController extends Controller
     {
         $userData = Auth::user();
 
-        $data = 0;
+        $data = null;
 
         switch ($type) {
             case 'processors':
@@ -119,9 +119,12 @@ class CatalogController extends Controller
             case 'motherboards':
                 $data = $this->motherboardsData->findOrFail($id);
                 break;
+<<<<<<< HEAD
             case 'coolers':
                 $data = $this->coolersData->findOrFail($id);
                 break;
+=======
+>>>>>>> 315da151fefd2ad9d4339cad06aa219d5ba498c4
         }
 
         return view('product-card', compact('userData', 'data', 'type'));
