@@ -26,7 +26,7 @@
                         <div class="info-row for-length full-width">
                             <a href="{{ route('changePasswordForm') }}">Изменить пароль</a>
                         </div>
-                        @if(Auth::user()->role === 'admin')
+                        @if(Auth::user()->role_id === 1)
                         <div class="info-row for-length full-width">
                             <a href="{{ route('admin.panel') }}">Админ-панель</a>
                         </div>

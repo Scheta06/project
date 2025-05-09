@@ -1,0 +1,53 @@
+@media (max-width:768px) {
+    .card-main {
+        flex-direction: column;
+    }
+
+    .card-left-bar {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .return {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        max-width: 40px;
+        min-height: 40px;
+    }
+
+    .return > span {
+        display: none;
+    }
+
+    .card-right-bar {
+        margin-top: 40px;
+        order: 2;
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    .container {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header {
+        display: none
+    }
+
+    .card-left-bar > .image {
+        min-height: 350px;
+        border-radius: 0 0 6px 6px;
+    }
+
+    .componentTitle {
+        font-size: var(--mobile-huge-font);
+        min-height: 20px;
+    }
+
+    .card-right-bar > .info-block > .description {
+        font-size: var(--mobile-small-font);
+    }
+}

@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name')->default('Профиль');
             $table->string('email')->unique();
-            $table->enum('role', ['user', 'admin']);
             $table->string('password');
-            $table->rememberToken()->nullable();;
+            $table->rememberToken()->nullable();
+
+            $table->foreignId('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->timestamps();
         });
 

@@ -1,4 +1,47 @@
 @media (max-width:768px) {
+    .main-right-bar {
+        gap: 15px;
+    }
+
+    .configuration-components-block {
+        min-height: 30px;
+        padding: 0 15px;
+    }
+
+    .configuration-components-block > h2 {
+        font-size: var(--mobile-medium-font);
+    }
+
+    .configuration-components-block > a {
+        font-size: var(--mobile-medium-font);
+    }
+
+    .title-of-configuration {
+        gap: 5px;
+    }
+
+    .title-of-configuration > h2 {
+        color: var(--white-color);
+        font-size: var(--mobile-medium-font);
+        line-height: 20px;
+    }
+
+    .title-of-configuration > input[name="description"] {
+        min-height: 90px;
+    }
+
+    .save-config__button > button > h2 {
+        font-size: var(--mobile-medium-font);
+    }
+
+    .save-config__button {
+        min-height: 40px;
+    }
+
+    .main-photo {
+        min-height: 250px;
+    }
+
     .configuration-components-section {
         padding: 30px 20px;
         flex-wrap: wrap;

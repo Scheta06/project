@@ -22,3 +22,21 @@
 .item-block p {
     color: white;
 }
+
+.add-section {
+    max-width: 550px;
+}
+
+form {
+    max-height: 720px;
+}
+
+.new-image-block {
+    min-height: 550px;
+    background-color: var(--block-background-color1);
+}
+
+button.add-new-component {
+    width: 100%;
+    min-height: 100px;
+}

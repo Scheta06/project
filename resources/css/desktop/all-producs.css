@@ -26,6 +26,11 @@ a.go-back-button {
     background-color: var(--block-background-color1);
 }
 
+.right-info {
+    gap: 40px;
+    max-width: 810px;
+}
+
 input.sorting-input {
     width: 100%;
     min-height: 50px;
@@ -35,8 +40,6 @@ input.sorting-input {
 
 .products-section {
     width: 100%;
-    padding: 40px;
-    background-color: var(--block-background-color1);
     gap: 30px;
 }
 
@@ -44,6 +47,8 @@ input.sorting-input {
     width: 100%;
     min-height: 150px;
     gap: 40px;
+    background-color: var(--block-background-color1);
+    padding: 30px;
 }
 
 .photo {
@@ -73,4 +78,10 @@ input.sorting-input {
 .action-link {
     width: 100%;
     min-height: 60px;
+    font-weight: bold;
+}
+
+.return {
+    width: 100%;
+    min-height: 40px;
 }

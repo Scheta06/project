@@ -43,7 +43,7 @@ class CatalogController extends Controller
         $this->ramData          = RandomAccessMemory::with(['configuration', 'frequencyOfRandomAccessMemory', 'typeOfRandomAccessMemory', 'vendor']);
         $this->videocardsData   = Videocard::with(['configuration', 'microarchitecture', 'expressVersion', 'sizeOfVideoсard', 'typeOfMemory', 'vendor']);
         $this->psuData          = PowerSupply::with(['configuration', 'formFactor', 'vendor']);
-        $this->casesData = Casing::with(['configuration', 'formFactor', 'vendor']);
+        $this->casesData        = Casing::with(['configuration', 'formFactor', 'vendor']);
     }
 
     public function index()
@@ -113,9 +113,14 @@ class CatalogController extends Controller
         $data = 0;
 
         switch ($type) {
-
             case 'processors':
                 $data = $this->processorsData->findOrFail($id);
+                break;
+            case 'motherboards':
+                $data = $this->motherboardsData->findOrFail($id);
+                break;
+            case 'coolers':
+                $data = $this->coolersData->findOrFail($id);
                 break;
         }
 

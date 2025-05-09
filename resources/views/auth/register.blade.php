@@ -34,7 +34,7 @@
                 <label for="password" class="bold-medium-font">Пароль</label>
                 <input type="password" name="password" class=" small-border-radius" required>
             </div>
-            <button type="sumbit"
+            <button type="submit"
                 class="join-button mediun-border-radius  bold-small-font bright-button-style center full-width">Войти</button>
             <div class="links column-display">
                 <a href="{{ route('loginForm') }}" class="bold-small-font mediun-border-radius center full-width">Есть аккаунт? Перейти к авторизации</a>

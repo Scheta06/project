@@ -4,8 +4,13 @@ body.admin-body {
 
 header.admin-header {
     width: 100%;
+    min-height: 100px;
     max-height: 100px;
     background-color: var(--block-background-color3);
+}
+
+.admin-main {
+    height: 100%;
 }
 
 .admin-left-bar {
@@ -15,6 +20,7 @@ header.admin-header {
 
 .admin-right-bar {
     padding: 40px 100px;
+    height: fit-content;
 }
 
 .admin-action-block {
@@ -25,4 +31,8 @@ header.admin-header {
 .go-back {
     max-height: 80px;
     border-radius: 0;
+}
+
+.mobile-admin-nav, .mobile-admin-header {
+    display: none;
 }

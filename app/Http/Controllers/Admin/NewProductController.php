@@ -1,42 +1,52 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Models\Motherboard;
 use App\Models\Processor;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class NewProductController extends Controller
 {
     protected $typeOfComponents = [
-        'processors'           => 'Процессоры',
-        'motherboards'         => 'Материнские платы',
-        'coolers'              => 'Кулеры',
-        'storages'             => 'Хранилища',
-        'random_access_memory' => 'Оперативная память',
-        'videocards'           => 'Видеокарты',
-        'psu'                  => 'Блоки питания',
-        'cases'                => 'Корпусы',
+        'processor'   => 'Процессор',
+        'motherboard' => 'Материнская плата',
+        'cooler'      => 'Кулер',
+        'storage'     => 'Хранилище',
+        'ram'         => 'Оперативная память',
+        'videocard'   => 'Видеокарта',
+        'psu'         => 'Блок питания',
+        'case'        => 'Корпус',
     ];
 
-    public function index() {
-        return view('admin.create', ['typeOfComponents' => $this->typeOfComponents]);
+    public function index()
+    {
+        return view('admin.createProduct.index', ['typeOfComponents' => $this->typeOfComponents]);
     }
 
-    public function show() {
-        return view();
+    public function show($type)
+    {
+        return view('admin.createProduct.show', [
+            'type' => $type,
+        ]);
     }
 
-    public function create(Request $request, $type) {
-        $data = [];
-        switch($type) {
-            case 'processors':
+    public function create(Request $request, $type)
+    {
+        $data = null;
+
+        switch ($type) {
+            case 'processor':
                 $data = $request->validate([
                     'title',
-                    'description',
-                    
                 ]);
                 Processor::create($data);
+                break;
+            case 'motherboard':
+                $data = $request->validate([
+                    'title',
+                ]);
+                Motherboard::create($data);
                 break;
         }
     }
