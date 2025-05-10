@@ -119,12 +119,9 @@ class CatalogController extends Controller
             case 'motherboards':
                 $data = $this->motherboardsData->findOrFail($id);
                 break;
-<<<<<<< HEAD
-            case 'coolers':
-                $data = $this->coolersData->findOrFail($id);
-                break;
-=======
->>>>>>> 315da151fefd2ad9d4339cad06aa219d5ba498c4
+                case 'coolers':
+                    $data = $this->coolersData->findOrFail($id);
+                    break;
         }
 
         return view('product-card', compact('userData', 'data', 'type'));

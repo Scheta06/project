@@ -4,20 +4,9 @@
     @switch($type)
         @case('processors')
             @foreach ($componentModel as $item)
-<<<<<<< HEAD
                 <div class="products-block for-length mediun-border-radius">
                     <div class="right-info for-length full-width">
-                        <div class="photo center small-border-radius"></div>
-                        <div class="desctiption small-border-radius full-width center">
-                            {{ $item->vendor->title }}
-                            {{ $item->processorGeneration->type }}
-                            {{ $item->processorGeneration->title }}
-                            {{ $item->title }}
-                            [{{ $item->socket->title }}, {{ $item->base_frequency }}*{{ $item->count_of_cores }}]
-                        </div>
-=======
-                <div class="products-block for-length">
-                    <div class="photo small-border-radius"></div>
+                        <div class="photo small-border-radius"></div>
                     <div class="desctiption small-border-radius full-width center">
                         {{ $item->vendor->title }}
                         {{ $item->processorGeneration->type }}
@@ -30,7 +19,8 @@
                         [{{ $item->socket->title }},
                         {{ $item->base_frequency }}*{{ $item->count_of_cores }},
                         TDP {{$item->tdp}} вт]
->>>>>>> 315da151fefd2ad9d4339cad06aa219d5ba498c4
+
+                    </div>
                     </div>
                     <div class="action-section column-display full-width">
                         <a href="{{ route('showProduct', ['type' => $type, 'id' => $item->id]) }}"

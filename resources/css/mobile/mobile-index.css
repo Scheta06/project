@@ -59,4 +59,8 @@
     .configuration-components-block {
         flex-wrap: wrap;
     }
+
+    .desctiption {
+        max-width: 100%;
+    }
 }
