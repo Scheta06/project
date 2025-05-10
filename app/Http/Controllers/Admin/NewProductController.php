@@ -28,10 +28,9 @@ class NewProductController extends Controller
 
     public function show($type)
     {
-        
-
         return view('admin.createProduct.show', compact('type'));
     }
+    
     public function create(Request $request, $type)
     {
         $data = null;
@@ -39,7 +38,7 @@ class NewProductController extends Controller
         switch ($type) {
             case 'processor':
                 $data = $request->validate([
-                    'title',
+                    'title' => 'required|string|min:8',
                 ]);
                 Processor::create($data);
                 break;

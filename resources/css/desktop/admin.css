@@ -9,6 +9,16 @@ header.admin-header {
     background-color: var(--block-background-color3);
 }
 
+header.admin-header > a {
+    top: 30px;
+    left: 35px;
+    position: absolute;
+    min-width: 100px;
+    min-height: 40px;
+    max-height: 40px;
+    line-height: 20px;
+}
+
 .admin-main {
     height: 100%;
 }

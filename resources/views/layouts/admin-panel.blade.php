@@ -17,14 +17,13 @@
                 <a href="{{ route('admin.allProduct') }}" class="admin-action-block center bold-medium-font">Все товары</a>
                 <a href="{{ route('admin.createProduct.index') }}" class="admin-action-block center bold-medium-font">Создать новый товар</a>
             </div>
-            <a href="{{ route('index') }}" class="go-back full-width bright-button-style full-height center bold-small-font">Вернуться на главную страницу</a>
         </div>
         <div class="admin-right-bar full-width full-height">
             @yield('content')
         </div>
         <div class="mobile-admin-nav for-length">
-            <a href="{{ route('admin.allProduct') }}" class="center">Все товары</a>
-            <a href="{{ route('admin.createProduct.index') }}" class="center">Создать новый товар</a>
+            <a href="{{ route('admin.allProduct') }}" class="center full-width">Все товары</a>
+            <a href="{{ route('admin.createProduct.index') }}" class="center full-width">Создать новый товар</a>
         </div>
     </main>
 </body>
