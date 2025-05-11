@@ -122,6 +122,13 @@ button {
     color: black;
 }
 
+/*Неактивная кнопка*/
+
+.unactive {
+    background-color: var(--header-and-footer-background-color);
+    color: var(--white-color);
+}
+
 /*Скругления*/
 
 .huge-border-radius {

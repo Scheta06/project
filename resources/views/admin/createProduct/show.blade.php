@@ -2,45 +2,32 @@
 
 @section('content')
     @switch($type)
-        @case('processor')
+        @case('processors')
             <h1>Новый процессор</h1>
-            <form action="" class="for-length full-height">
-                <div class="specifications-section">
-                    <div class="specifications-input">
-                        <label for="">Название</label>
-                        <input type="text">
-                    </div>
-                    <div class="specifications-input">
-                        <label for="">Описание</label>
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="add-section full-width column-for-over-length">
-                    <div class="new-image-block full-width mediun-border-radius center">
-                        
-                    </div>
-                    <button class="add-new-component center pale-button-style">Создать</button>
-                </div>
+            <form action="">
+                @csrf
+
             </form>
         @break
 
-        @case('motherboard')
+        @case('motherboards')
             <h1>Новая материнская плата</h1>
+
         @break
 
-        @case('cooler')
+        @case('coolers')
             <h1>Новый кулер</h1>
         @break
 
-        @case('ram')
+        @case('random_access_memory')
             <h1>Новая оперативная память</h1>
         @break
 
-        @case('storage')
+        @case('storages')
             <h1>Новое хранилище</h1>
         @break
 
-        @case('videocard')
+        @case('videocards')
             <h1>Новая видеокарта</h1>
         @break
 
@@ -48,7 +35,7 @@
             <h1>Новый блок питания</h1>
         @break
 
-        @case('case')
+        @case('cases')
             <h1>Новый корпус</h1>
         @break
 

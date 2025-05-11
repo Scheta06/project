@@ -34,7 +34,7 @@ Route::middleware(['admin'])->group(function() {
     Route::get('/admin-panel', [AdminController::class, 'index'])->name('admin.panel'); // Страница админ-панели GET
 
 
-    Route::get('admin-panel/all-products', [ProductController::class, 'index'])->name('admin.allProduct'); // Страница отображения всех товаров в базе данных GET
+    Route::get('admin-panel/all-products', [ProductController::class, 'index'])->name('admin.allProduct.index'); // Страница отображения всех товаров в базе данных GET
 
     Route::get('/admin-panel/new-product', [NewProductController::class, 'index'])->name('admin.createProduct.index'); // Страница выбора категории для создания нового товара GET
     Route::get('/admin-panel/new-product/{type}', [NewProductController::class, 'show'])->name('admin.createProduct.show'); // Страница для создания товара по определенной категории GET

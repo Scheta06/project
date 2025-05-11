@@ -1,53 +1,34 @@
 <?php
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Motherboard;
-use App\Models\Processor;
 use Illuminate\Http\Request;
+use App\Http\Controllers\BaseController;
 
-class NewProductController extends Controller
+class NewProductController extends BaseController
 {
-    protected $typeOfComponents = [
+    protected $configData;
 
-        'processor'   => 'Процессор',
-        'motherboard' => 'Материнская плата',
-        'cooler'      => 'Кулер',
-        'storage'     => 'Хранилище',
-        'ram'         => 'Оперативная память',
-        'videocard'   => 'Видеокарта',
-        'psu'         => 'Блок питания',
-        'case'        => 'Корпус',
-    ];
+    public function __construct()
+    {
+        $this->configData = config('constants.typeOfComponents');
+    }
 
     public function index()
     {
-        return view('admin.createProduct.index', ['typeOfComponents' => $this->typeOfComponents]);
+        return view('admin.createProduct.index', ['typeOfComponents' => $this->configData]);
     }
-
 
     public function show($type)
     {
-        return view('admin.createProduct.show', compact('type'));
+        $ArrayOfData = config('constants.dataOfComponents');
+
+        $data = $ArrayOfData[$type];
+
+        return view('admin.createProduct.show', compact('type', 'data'));
     }
-    
+
     public function create(Request $request, $type)
     {
-        $data = null;
 
-        switch ($type) {
-            case 'processor':
-                $data = $request->validate([
-                    'title' => 'required|string|min:8',
-                ]);
-                Processor::create($data);
-                break;
-            case 'motherboard':
-                $data = $request->validate([
-                    'title',
-                ]);
-                Motherboard::create($data);
-                break;
-        }
     }
 }

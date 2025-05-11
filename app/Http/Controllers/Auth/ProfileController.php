@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BaseController;
 
-class ProfileController extends Controller
+class ProfileController extends BaseController
 {
     public function index() {
         $userData = Auth::user();

@@ -1,8 +1,4 @@
-<header class="admin-header center full-height">
-    <a href="{{route('profile')}}" class="mediun-border-radius center pale-button-style">Назад</a>
-    <h1>Админ-панель</h1>
-</header>
-
-<header class="mobile-admin-header center full-height">
+<header class="admin-header full-height center full-width">
+    <a href="{{ route('profile') }}" class="pale-button-style"></a>
     <h1>Админ-панель</h1>
 </header>

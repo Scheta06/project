@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+use App\Http\Controllers\BaseController;
 
-class RegisterController extends Controller
+class RegisterController extends BaseController
 {
     public function index () {
         return view('auth.register');

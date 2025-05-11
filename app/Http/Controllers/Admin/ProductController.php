@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\BaseController;
 
-class ProductController extends Controller
+class ProductController extends BaseController
 {
     public function index() {
-        return view('admin.show');
+        return view('admin.allProduct.index');
     }
 }

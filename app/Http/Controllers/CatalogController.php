@@ -1,56 +1,23 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Casing;
-use App\Models\Cooler;
-use App\Models\Motherboard;
-use App\Models\PowerSupply;
-use App\Models\Processor;
-use App\Models\RandomAccessMemory;
-use App\Models\Storage;
-use App\Models\Videocard;
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class CatalogController extends Controller
+class CatalogController extends BaseController
 {
-    protected $typeOfComponents = [
-        'processors'           => 'Процессоры',
-        'motherboards'         => 'Материнские платы',
-        'coolers'              => 'Кулеры',
-        'storages'             => 'Хранилища',
-        'random_access_memory' => 'Оперативная память',
-        'videocards'           => 'Видеокарты',
-        'psu'                  => 'Блоки питания',
-        'cases'                => 'Корпусы',
-    ];
-
-    protected $processorsData;
-    protected $motherboardsData;
-    protected $coolersData;
-    protected $storageData;
-    protected $ramData;
-    protected $videocardsData;
-    protected $psuData;
-    protected $casesData;
+    protected $configData;
 
     public function __construct()
     {
-        $this->processorsData   = Processor::with(['processorGeneration', 'vendor', 'socket']);
-        $this->motherboardsData = Motherboard::with(['configuration', 'socket', 'chipset', 'formFactor', 'expressVersion', 'typeOfMemory', 'vendor']);
-        $this->coolersData      = Cooler::with(['configuration', 'vendor']);
-        $this->storageData      = Storage::with(['sizeOfStorage', 'vendor']);
-        $this->ramData          = RandomAccessMemory::with(['configuration', 'frequencyOfRandomAccessMemory', 'typeOfRandomAccessMemory', 'vendor']);
-        $this->videocardsData   = Videocard::with(['configuration', 'microarchitecture', 'expressVersion', 'sizeOfVideoсard', 'typeOfMemory', 'vendor']);
-        $this->psuData          = PowerSupply::with(['configuration', 'formFactor', 'vendor']);
-        $this->casesData        = Casing::with(['configuration', 'formFactor', 'vendor']);
+        parent::__construct();
+        $this->configData = config('constants.typeOfComponents');
     }
 
     public function index()
     {
         $userData = Auth::user();
 
-        $typeOfComponents = $this->typeOfComponents;
+        $typeOfComponents = $this->configData;
 
         return view('category', compact('userData', 'typeOfComponents'));
     }
@@ -59,7 +26,7 @@ class CatalogController extends Controller
     {
         $userData = Auth::user();
 
-        $componentData = $this->typeOfComponents[$value];
+        $componentData = $this->configData[$value];
 
         $componentModel = [];
 
@@ -119,9 +86,24 @@ class CatalogController extends Controller
             case 'motherboards':
                 $data = $this->motherboardsData->findOrFail($id);
                 break;
-                case 'coolers':
-                    $data = $this->coolersData->findOrFail($id);
-                    break;
+            case 'coolers':
+                $data = $this->coolersData->findOrFail($id);
+                break;
+            case 'storages':
+                $data = $this->storageData->findOrFail($id);
+                break;
+            case 'random_access_memory':
+                $data = $this->ramData->findOrFail($id);
+                break;
+            case 'videocards':
+                $data = $this->videocardsData->findOrFail($id);
+                break;
+            case 'psu':
+                $data = $this->psuData->findOrFail($id);
+                break;
+            case 'cases':
+                $data = $this->casesData->findOrFail($id);
+                break;
         }
 
         return view('product-card', compact('userData', 'data', 'type'));

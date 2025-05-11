@@ -64,3 +64,89 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+<?php
+
+return [
+    'dataOfComponents' => [
+        'processor'   => [
+            'title'                   => 'Название',
+            'description'             => 'Описание',
+            'tdp'                     => 'Тепловыделение',
+            'base_frequency'          => 'Базовая частота',
+            'max_frequency'           => 'Максимальная частота',
+            'count_of_cores'          => 'Количество ядер',
+            'count_of_streams'        => 'Количество потоков',
+            'processor_generation_id' => 'Поколение процессоров',
+            'socket_id'               => 'Сокет',
+            'vendor_id'               => 'Производитель',
+        ],
+        'motherboard' => [
+            'title'              => 'Название',
+            'subtitle'           => 'Доп. название',
+            'description'        => 'Описание',
+            'socket_id'          => 'Сокет',
+            'chipset_id'         => 'Чипсет',
+            'form_id'            => 'Форм-фактор',
+            'express_version_id' => 'Версия PCI-E',
+            'type_of_memory_id'  => 'Тип памяти',
+            'vendor_id'          => 'Производитель',
+        ],
+        'cooler'      => [
+            'title'       => 'Название',
+            'description' => 'Описание',
+            'power'       => 'Рассеиваемая мощность',
+            'chipset'     => 'Минимальные обороты',
+            'form'        => 'Максимальные обороты',
+            'vendor_id'   => 'Производитель',
+        ],
+        'storage'     => [
+            'title'              => 'Название',
+            'description'        => 'Описание',
+            'reading_rate'       => 'Скорость чтения',
+            'recording_rate'     => 'Скорость записи',
+            'max_resource'       => 'Ресурс записи',
+            'memory_capacity_id' => 'Вместимость памяти',
+            'vendor_id'          => 'Производитель',
+        ],
+        'ram'         => [
+            'title'                               => 'Название',
+            'description'                         => 'Описание',
+            'count_of_modules'                    => 'Количество модулей',
+            'frequency_of_random_access_memories' => 'Частота',
+            'type_of_memory_id'                   => 'Тип памяти',
+            'memory_capacity_id'                  => 'Вместимость памяти',
+            'vendor_id'                           => 'Производитель',
+        ],
+        'videocard'   => [
+            'title'                => 'Название',
+            'description'          => 'Описание',
+            'max_frequency'        => 'Максимальная частота',
+            'microarchitecture_id' => 'Архитектура',
+            'express_version_id'   => 'Версия PCI-E',
+            'type_of_memory_id'    => 'Тип памяти',
+            'memory_capacity_id'   => 'Вместимость памяти',
+            'vendor_id'            => 'Производитель',
+        ],
+        'case' => [
+            'title' => 'Название',
+            'description' => 'Описание',
+            'form_id' => 'Форм-фактор',
+            'vendor_id' => 'Производитель',
+        ],
+        'psu' => [
+            'title' => 'Название',
+            'description' => 'Описание',
+            'power' => 'Мощность',
+            'form_id' => 'Форм-фактор',
+            'vendor_id' => 'Производитель',
+        ]
+    ],
+];
+

@@ -9,23 +9,25 @@
     @vite(['resources/css/duplicate-elements.css', 'resources/css/mobile-duplicate-elements.css', 'resources/css/desktop/admin.css', 'resources/css/desktop/new-product.css', 'resources/css/mobile/mobile-admin.css'])
 </head>
 
-<body class="admin-body column-display">
+<body>
     @include('partials.admin-header')
-    <main class="admin-main for-length full-height">
-        <div class="admin-left-bar full-height full-width column-for-over-length">
-            <div class="action-section">
-                <a href="{{ route('admin.allProduct') }}" class="admin-action-block center bold-medium-font">Все товары</a>
-                <a href="{{ route('admin.createProduct.index') }}" class="admin-action-block center bold-medium-font">Создать новый товар</a>
+    <div class="container">
+        <main class="admin-main for-length full-width">
+            <div class="admin-nav-bar full-width">
+                <a href="{{ route('admin.allProduct.index') }}" class="center full-width unactive">Все товары</a>
+                <a href="{{ route('admin.createProduct.index') }}" class="center full-width unactive">Создать товар</a>
             </div>
-        </div>
-        <div class="admin-right-bar full-width full-height">
-            @yield('content')
-        </div>
-        <div class="mobile-admin-nav for-length">
-            <a href="{{ route('admin.allProduct') }}" class="center full-width">Все товары</a>
-            <a href="{{ route('admin.createProduct.index') }}" class="center full-width">Создать новый товар</a>
-        </div>
-    </main>
+            <div class="admin-content-bar">
+                <div class="admin-welcome-title">
+                    @yield('welcome-content')
+                </div>
+                <div>
+                     @yield('content')
+                </div>
+            </div>
+        </main>
+    </div>
+    @include('partials.admin-footer')
 </body>
 
 </html>
