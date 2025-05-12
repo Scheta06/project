@@ -28,8 +28,8 @@ abstract class BaseController
         $this->motherboardsData = Motherboard::with(['configuration', 'socket', 'chipset', 'formFactor', 'expressVersion', 'typeOfMemory', 'vendor']);
         $this->coolersData      = Cooler::with(['configuration', 'vendor']);
         $this->storageData      = Storage::with(['configuration', 'memoryCapacity', 'vendor']);
-        $this->ramData          = RandomAccessMemory::with(['configuration', 'frequencyOfRandomAccessMemory', 'typeOfRandomAccessMemory', 'vendor']);
-        $this->videocardsData   = Videocard::with(['configuration', 'microarchitecture', 'expressVersion', 'sizeOfVideoсard', 'typeOfMemory', 'vendor']);
+        $this->ramData          = RandomAccessMemory::with(['configuration', 'frequency', 'typeOfMemory', 'vendor']);
+        $this->videocardsData   = Videocard::with(['configuration', 'microarchitecture', 'expressVersion', 'memoryCapacity', 'typeOfMemory', 'vendor']);
         $this->psuData          = PowerSupply::with(['configuration', 'formFactor', 'vendor']);
         $this->casesData        = Casing::with(['configuration', 'formFactor', 'vendor']);
     }

@@ -8,13 +8,10 @@ use App\Models\Configuration;
 class Videocard extends Model
 {
     protected $fillable = [
-        'id',
+
         'title',
         'description',
         'max_frequency',
-    ];
-
-    protected $hidden = [
         'microarchitecture_id',
         'express_version_id',
         'size_of_memory_id',
@@ -22,12 +19,16 @@ class Videocard extends Model
         'vendor_id',
     ];
 
+    protected $hidden = [
+        'id',
+    ];
+
     public function configuration() {
         return $this->hasMany(Configuration::class, 'videocard_id');
     }
 
     public function microarchitecture() {
-        return $this->belogsTo(Microarchitecture::class);
+        return $this->belongsTo(Microarchitecture::class);
     }
 
     public function expressVersion() {
@@ -35,7 +36,7 @@ class Videocard extends Model
     }
 
     public function memoryCapacity() {
-        return $this->belogsTo(MemoryCapacity::class);
+        return $this->belongsTo(MemoryCapacity::class);
     }
 
     public function typeOfMemory() {
@@ -43,6 +44,6 @@ class Videocard extends Model
     }
 
     public function vendor() {
-        return $this->belogsTo(Vendor::class);
+        return $this->belongsTo(Vendor::class);
     }
 }

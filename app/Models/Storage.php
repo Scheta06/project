@@ -32,7 +32,7 @@ class Storage extends Model
 
     public function memoryCapacity()
     {
-        return $this->belogsTo(MemoryCapacity::class, 'memory_capacity_id');
+        return $this->belongsTo(MemoryCapacity::class, 'memory_capacity_id');
     }
 
     public function vendor()

@@ -25,18 +25,18 @@ class RandomAccessMemory extends Model
     }
 
     public function memoryCapacity() {
-        return $this->belogsTo(MemoryCapacity::class);
+        return $this->belongsTo(MemoryCapacity::class);
     }
 
-    public function frequencyOfRandomAccessMemory() {
-        return $this->belogsTo(FrequencyOfRandomAccessMemory::class);
+    public function frequency() {
+        return $this->belongsTo(FrequencyOfRandomAccessMemory::class);
     }
 
-    public function typeOfRandomAccessMemory() {
-        return $this->belogsTo(TypeOfMemory::class);
+    public function typeOfMemory() {
+        return $this->belongsTo(TypeOfMemory::class);
     }
 
     public function vendor() {
-        return $this->belogsTo(Vendor::class);
+        return $this->belongsTo(Vendor::class);
     }
 }

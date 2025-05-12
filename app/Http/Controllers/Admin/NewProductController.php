@@ -7,6 +7,7 @@ use App\Models\ExpressVersion;
 use App\Models\FormFactor;
 use App\Models\FrequencyOfRandomAccessMemory;
 use App\Models\MemoryCapacity;
+use App\Models\Microarchitecture;
 use App\Models\Motherboard;
 use App\Models\Processor;
 use App\Models\ProcessorGeneration;
@@ -43,6 +44,7 @@ class NewProductController extends BaseController
         $typeOfMemory = TypeOfMemory::all();
         $memoryCapacity = MemoryCapacity::all();
         $frequency = FrequencyOfRandomAccessMemory::all();
+        $microarchitectures = Microarchitecture::all();
 
         return view('admin.createProduct.show', [
             'type' => $type,
@@ -71,6 +73,21 @@ class NewProductController extends BaseController
                 'random_access_memory' => [
                     'memory_capacity_id' => $memoryCapacity,
                     'frequency_id' => $frequency
+                ],
+                'videocards' => [
+                    'microarchitecture_id' => $microarchitectures,
+                    'express_version_id' => $expressVersion,
+                    'memory_capacity_id' => $memoryCapacity,
+                    'type_of_memory_id' => $typeOfMemory,
+                    'vendor_id' => $vendor
+                ],
+                'psu' => [
+                    'form_id' => $formFactor,
+                    'vendor_id' => $vendor,
+                ],
+                'cases' => [
+                    'form_id' => $formFactor,
+                    'vendor_id' => $vendor,
                 ]
             ],
         ]);

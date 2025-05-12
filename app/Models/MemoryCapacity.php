@@ -15,7 +15,7 @@ class MemoryCapacity extends Model
     }
 
     public function storages() {
-        return $this->hasMany(Storage1::class);
+        return $this->hasMany(Storage::class);
     }
 
     public function videocard() {

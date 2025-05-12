@@ -31,6 +31,10 @@ a.go-back-button {
     max-width: 810px;
 }
 
+.right-info > .desctiption > span {
+    text-transform: lowercase;
+}
+
 input.sorting-input {
     width: 100%;
     min-height: 50px;

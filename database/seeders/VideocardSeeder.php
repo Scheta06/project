@@ -20,7 +20,7 @@ class VideocardSeeder extends Seeder
             'microarchitecture_id' => 1,
             'express_version_id' => 2,
             'memory_capacity_id' => 3,
-            'type_of_memory' => 3,
+            'type_of_memory_id' => 3,
             'vendor_id' => 2,
         ]);
     }

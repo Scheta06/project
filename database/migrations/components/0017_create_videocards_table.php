@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('microarchitecture_id')->references('id')->on('microarchitectures')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('express_version_id')->references('id')->on('express_versions')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('memory_capacity_id')->references('id')->on('memory_capacities')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreignId('type_of_memory')->references('id')->on('type_of_memories')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('type_of_memory_id')->references('id')->on('type_of_memories')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('vendor_id')->references('id')->on('vendors')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
