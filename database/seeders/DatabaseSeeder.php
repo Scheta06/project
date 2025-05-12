@@ -35,7 +35,8 @@ class DatabaseSeeder extends Seeder
             // StorageSeeder::class,
             // RamSeeder::class,
             // CaseSeeder::class,
-            VideocardSeeder::class,
+            // VideocardSeeder::class,
+            MicroarchitecturesSeeder::class,
         ]);
     }
 }

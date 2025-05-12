@@ -5,6 +5,8 @@ use App\Http\Controllers\BaseController;
 use App\Models\Chipset;
 use App\Models\ExpressVersion;
 use App\Models\FormFactor;
+use App\Models\FrequencyOfRandomAccessMemory;
+use App\Models\MemoryCapacity;
 use App\Models\Motherboard;
 use App\Models\Processor;
 use App\Models\ProcessorGeneration;
@@ -39,31 +41,37 @@ class NewProductController extends BaseController
         $formFactor = FormFactor::all();
         $expressVersion = ExpressVersion::all();
         $typeOfMemory = TypeOfMemory::all();
+        $memoryCapacity = MemoryCapacity::all();
+        $frequency = FrequencyOfRandomAccessMemory::all();
 
         return view('admin.createProduct.show', [
             'type' => $type,
             'data' => $data,
-            'socket' => $socket,
-            'chipset' => $chipset,
-            'processorGeneration' => $processorGeneration,
-            'vendor' => $vendor,
-            'formFactor' => $formFactor,
-            'expressVersion' => $expressVersion,
-            'typeOfMemory' => $typeOfMemory,
             'specificationArray' => [
-                'processor' => [
-                    'processorGeneration' => $processorGeneration,
-                    'socket' => $socket,
-                    'vendor' => $vendor,
+                'processors' => [
+                    'processor_generation_id' => $processorGeneration,
+                    'socket_id' => $socket,
+                    'vendor_id' => $vendor,
                 ],
                 'motherboards' => [
-                    'socket' => $socket,
-                    'chipset' => $chipset,
-                    'formFactor' => $formFactor,
-                    'expressVersion' => $expressVersion,
-                    'typeOfMemory' => $typeOfMemory,
-                    'vendor' => $vendor,
+                    'socket_id' => $socket,
+                    'chipset_id' => $chipset,
+                    'form_id' => $formFactor,
+                    'express_version_id' => $expressVersion,
+                    'type_of_memory_id' => $typeOfMemory,
+                    'vendor_id' => $vendor,
                 ],
+                'coolers' => [
+                    'vendor_id' => $vendor
+                ],
+                'storages' => [
+                    'memory_capacity_id' => $memoryCapacity,
+                    'vendor_id' => $vendor
+                ],
+                'random_access_memory' => [
+                    'memory_capacity_id' => $memoryCapacity,
+                    'frequency_id' => $frequency
+                ]
             ],
         ]);
     }
