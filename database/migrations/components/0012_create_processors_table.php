@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedInteger('count_of_streams');
             $table->unsignedInteger('tdp');
 
-
+            
             $table->foreignId('processor_generation_id')->references('id')->on('processor_generations')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('socket_id')->references('id')->on('sockets')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('vendor_id')->references('id')->on('vendors')->cascadeOnUpdate()->cascadeOnDelete();

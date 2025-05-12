@@ -41,6 +41,10 @@ class Configuration extends Model
         return $this->belongsTo(RandomAccessMemory::class);
     }
 
+    public function storage() {
+        return $this->belongsTo(Storage::class);
+    }
+
     public function cooler() {
         return $this->belongsTo(Cooler::class);
     }

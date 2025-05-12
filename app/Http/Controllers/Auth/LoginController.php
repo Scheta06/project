@@ -27,7 +27,7 @@ class LoginController extends BaseController
         ]);
     }
 
-    public function logout (Request $request) {
+    public function logout () {
         Auth::logout();
 
         return redirect()->route ('index');

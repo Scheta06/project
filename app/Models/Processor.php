@@ -26,7 +26,7 @@ class Processor extends Model
         'vendor_id',
     ];
 
-    public function configurations() {
+    public function configuration() {
         return $this->hasMany(Configuration::class, 'processor_id');
     }
 

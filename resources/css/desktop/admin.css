@@ -66,4 +66,35 @@ footer.admin-nav {
     display: none;
 }
 
+.admin-create-main {
+    margin-top: 40px;
+}
 
+.admin-create-main > .admin-create-left-bar {
+    max-width: 700px;
+}
+
+.admin-content-bar > div:last-child > form {
+    max-height: 100%;
+}
+
+.admin-create-block > label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.admin-create-block > input, select {
+    min-height: 40px;
+    border: 1px solid var(--block-background-color4);
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0 15px;
+}
+
+.admin-create-button {
+    margin-top: 40px;
+    max-width: 550px;
+    min-height: 100px;
+    font-size: 24px;
+    font-weight: bold;
+}

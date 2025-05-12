@@ -7,20 +7,20 @@
                 <div class="products-block for-length mediun-border-radius">
                     <div class="right-info for-length full-width">
                         <div class="photo small-border-radius"></div>
-                    <div class="desctiption small-border-radius full-width center">
-                        {{ $item->vendor->title }}
-                        {{ $item->processorGeneration->type }}
-                        @if($item->vendor->title === 'intel')
-                        {{ $item->processorGeneration->title }}-{{ $item->title }}
-                        @else
-                        {{ $item->processorGeneration->title }}
-                        {{ $item->title }}
-                        @endif
-                        [{{ $item->socket->title }},
-                        {{ $item->base_frequency }}*{{ $item->count_of_cores }},
-                        TDP {{$item->tdp}} вт]
+                        <div class="desctiption small-border-radius full-width center">
+                            {{ $item->vendor->title }}
+                            {{ $item->processorGeneration->type }}
+                            @if ($item->vendor->title === 'intel')
+                                {{ $item->processorGeneration->title }}-{{ $item->title }}
+                            @else
+                                {{ $item->processorGeneration->title }}
+                                {{ $item->title }}
+                            @endif
+                            [{{ $item->socket->title }},
+                            {{ $item->base_frequency }}*{{ $item->count_of_cores }},
+                            TDP {{ $item->tdp }} вт]
 
-                    </div>
+                        </div>
                     </div>
                     <div class="action-section column-display full-width">
                         <a href="{{ route('showProduct', ['type' => $type, 'id' => $item->id]) }}"
@@ -83,7 +83,32 @@
                     </div>
                 </div>
             @endforeach
+        @break
 
-            @default
-        @endswitch
-    @endsection
+        @case('storages')
+            @foreach ($componentModel as $item)
+                <div class="products-block for-length mediun-border-radius">
+                    <div class="right-info for-length full-width">
+                        <div class="photo small-border-radius"></div>
+                        <div class="desctiption small-border-radius full-width center">
+                            {{ $item->vendor->title }}
+                            {{ $item->title }}
+                            [{{ $item->reading_rate }}]
+                        </div>
+                    </div>
+                    <div class="action-section column-display full-width">
+                        <a href="{{ route('showProduct', ['type' => $type, 'id' => $item->id]) }}"
+                            class="action-link pale-button-style center">
+                            Подробнее
+                        </a>
+                        <a href="#" class="action-link pale-button-style center">
+                            Добавить
+                        </a>
+                    </div>
+                </div>
+            @endforeach
+        @break
+
+        @default
+    @endswitch
+@endsection

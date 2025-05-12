@@ -14,8 +14,8 @@ class MemoryCapacity extends Model
         return $this->hasMany(RandomAccessMemory::class, 'memory_capacity_id');
     }
 
-    public function storage() {
-        return $this->hasMany(Storage::class, 'memory_capacity_id');
+    public function storages() {
+        return $this->hasMany(Storage1::class);
     }
 
     public function videocard() {

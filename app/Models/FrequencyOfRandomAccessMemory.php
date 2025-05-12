@@ -2,19 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class FrequencyOfRandomAccessMemory extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
-        'title',
         'base_frequency',
-        'max_frequency',
     ];
 
-    protected $hidden = [];
-
-    public function processor() {
-        return $this->hasMany(Processor::class, 'frequency_of_processor_id');
+    public function randomAccessMemory() {
+        return $this->hasMany(RandomAccessMemory::class, 'frequency_id');
     }
 }
