@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Configuration;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Processor extends Model
 {
@@ -18,27 +18,32 @@ class Processor extends Model
         'count_of_cores',
         'count_of_streams',
         'tdp',
+        'socket_id',
+        'vendor_id',
+        'processor_generation_id',
     ];
 
     protected $guarded = [
         'id',
-        'socket_id',
-        'vendor_id',
     ];
 
-    public function configuration() {
+    public function configuration()
+    {
         return $this->hasMany(Configuration::class, 'processor_id');
     }
 
-    public function socket() {
+    public function socket()
+    {
         return $this->belongsTo(Socket::class);
     }
 
-    public function vendor() {
+    public function vendor()
+    {
         return $this->belongsTo(Vendor::class);
     }
 
-    public function processorGeneration() {
+    public function processorGeneration()
+    {
         return $this->belongsTo(ProcessorGeneration::class);
     }
 }

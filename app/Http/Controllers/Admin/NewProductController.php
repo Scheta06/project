@@ -50,6 +50,21 @@ class NewProductController extends BaseController
             'formFactor' => $formFactor,
             'expressVersion' => $expressVersion,
             'typeOfMemory' => $typeOfMemory,
+            'specificationArray' => [
+                'processor' => [
+                    'processorGeneration' => $processorGeneration,
+                    'socket' => $socket,
+                    'vendor' => $vendor,
+                ],
+                'motherboards' => [
+                    'socket' => $socket,
+                    'chipset' => $chipset,
+                    'formFactor' => $formFactor,
+                    'expressVersion' => $expressVersion,
+                    'typeOfMemory' => $typeOfMemory,
+                    'vendor' => $vendor,
+                ],
+            ],
         ]);
     }
 
