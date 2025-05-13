@@ -2,9 +2,9 @@
 
 @section('content')
     @if ($type == 'motherboards' || $type == 'random_access_memory' || $type == 'videocards')
-    <h1>Новая <span>{{$title}}</span></h1>
+        <h1>Новая <span>{{ $title }}</span></h1>
     @else
-    <h1>Новый <span>{{$title}}</span></h1>
+        <h1>Новый <span>{{ $title }}</span></h1>
     @endif
 
     <form action="{{ route('admin.createProduct.create', ['type' => $type]) }}" method="POST">
@@ -19,15 +19,25 @@
                             class="admin-create-input full-width mediun-border-radius" required>
                     </div>
                 @endforeach
-
-                @foreach ($specificationArray[$type] as $key => $item)
-                    <select name="{{ $key }}" required style="margin-top:10px" class="full-width">
-                        <option value="">Выберите категорию</option>
-                        @foreach ($item as $value)
-                            <option value="{{ $value->id }}">{{ $value->title }}</option>
-                        @endforeach
-                    </select>
-                @endforeach
+                @if ($type == 'processors')
+                    @foreach ($specificationArray[$type] as $key => $item)
+                        <select name="{{ $key }}" required style="margin-top:10px" class="full-width">
+                            <option value="">Выберите категорию</option>
+                            @foreach ($item as $value)
+                                <option value="{{ $value->id }}">{{ $value->type }} {{ $value->title }}</option>
+                            @endforeach
+                        </select>
+                    @endforeach
+                @else
+                    @foreach ($specificationArray[$type] as $key => $item)
+                        <select name="{{ $key }}" required style="margin-top:10px" class="full-width">
+                            <option value="">Выберите категорию</option>
+                            @foreach ($item as $value)
+                                <option value="{{ $value->id }}">{{ $value->title }}</option>
+                            @endforeach
+                        </select>
+                    @endforeach
+                @endif
             </div>
             <div class="admin-create-right-bar column-for-over-length">
                 <div class="admin-create-image center"></div>
