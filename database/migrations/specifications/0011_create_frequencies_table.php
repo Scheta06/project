@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('frequency_of_random_access_memories', function (Blueprint $table) {
+        Schema::create('frequencies', function (Blueprint $table) {
             $table->id();
-            $table->float('base_frequency');
+            $table->float('title');
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('frequency_of_random_access_memories');
+        Schema::dropIfExists('frequencies');
     }
 };

@@ -9,20 +9,17 @@ use Illuminate\Database\Eloquent\Model;
 class Storage extends Model
 {
     protected $fillable = [
-        'id',
         'title',
         'description',
         'reading_rate',
         'recording_rate',
         'max_resource',
         'memory_capacity_id',
+        'vendor_id',
     ];
 
-    protected $hidden = [];
-
-    protected $guarded = [
-
-        'vendor_id',
+    protected $hidden = [
+        'id',
     ];
 
     public function configuration()

@@ -13,15 +13,16 @@ class Motherboard extends Model
     protected $fillable = [
         'title',
         'description',
-    ];
-
-    protected $guarded = [
         'socket_id',
         'chipset_id',
         'form_id',
         'express_version_id',
         'type_of_memory_id',
         'vendor_id',
+    ];
+
+    protected $hidden = [
+        'id'
     ];
 
     public function configuration() {

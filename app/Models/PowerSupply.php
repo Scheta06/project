@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Models\Configuration;
+use Illuminate\Database\Eloquent\Model;
 
 class PowerSupply extends Model
 {
@@ -11,22 +11,26 @@ class PowerSupply extends Model
         'title',
         'description',
         'power',
-    ];
-
-    protected $guarded = [
         'form_factor_id',
         'vendor_id',
     ];
 
-    public function configuration() {
+    protected $hidden = [
+        'id'
+    ];
+
+    public function configuration()
+    {
         return $this->hasMany(Configuration::class, 'motherboard_id');
     }
 
-    public function formFactor() {
+    public function formFactor()
+    {
         return $this->belongsTo(FormFactor::class);
     }
 
-    public function vendor() {
+    public function vendor()
+    {
         return $this->belongsTo(Vendor::class);
     }
 }

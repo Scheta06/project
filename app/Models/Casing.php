@@ -10,18 +10,19 @@ class Casing extends Model
     protected $fillable = [
         'title',
         'description',
+        'form_id',
+        'vendor_id',
     ];
 
-    protected $guarded = [
-        'form_factor_id',
-        'vendor_id',
+    protected $hidden = [
+        'id'
     ];
 
     public function configuration() {
         return $this->hasMany(Configuration::class, 'case_id');
     }
 
-    public function formFactor() {
+    public function formFactors() {
         return $this->belongsTo(FormFactor::class);
     }
 

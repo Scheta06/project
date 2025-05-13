@@ -13,7 +13,7 @@ class TypeOfMemory extends Model
         'title',
     ];
 
-    protected $guarded = [
+    protected $hidden = [
         'id'
     ];
 

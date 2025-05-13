@@ -11,7 +11,7 @@ class FormFactor extends Model
 
     protected $fillable = [
         'title',
-        'type'
+        'type',
     ];
 
     public function casing() {

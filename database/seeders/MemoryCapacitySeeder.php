@@ -33,7 +33,7 @@ class MemoryCapacitySeeder extends Seeder
 
         foreach($ArrayOfMemoryCapacity as $item) {
             MemoryCapacity::create([
-                'capacity' => $item
+                'title' => $item
             ]);
         }
     }

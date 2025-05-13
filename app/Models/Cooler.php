@@ -13,11 +13,11 @@ class Cooler extends Model
         'power',
         'min_performance',
         'max_performance',
-
+        'vendor_id',
     ];
 
-    protected $guarded = [
-        'vendor_id',
+    protected $hidden = [
+        'id'
     ];
 
     public function configuration() {

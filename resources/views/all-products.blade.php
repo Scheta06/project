@@ -45,7 +45,7 @@
                             {{ $item->title }}
                             {{ $item->chipset->title }}
                             {{ $item->subtitle }}
-                            [{{ $item->socket->title }}, {{ $item->typeOfMemory->title }}]
+                            [{{ $item->socket->title }}, {{ $item->typeOfMemory->title }}, {{ $item->formFactor->type }}]
                         </div>
                     </div>
                     <div class="action-section column-display full-width">
@@ -117,7 +117,7 @@
                         <div class="desctiption small-border-radius full-width center">
                             {{ $item->vendor->title }}
                             {{ $item->title }}
-                            [{{ $item->memoryCapacity->capacity }} гб*{{ $item->count_of_modules }}, {{ $item->frequency->base_frequency }}МГц]
+                            [{{ $item->memoryCapacity->title }} гб*{{ $item->count_of_modules }}, {{ $item->frequency->title }} МГц]
                         </div>
                     </div>
                     <div class="action-section column-display full-width">
@@ -164,7 +164,7 @@
                         <div class="desctiption small-border-radius full-width center">
                             {{ $item->vendor->title }}
                             {{ $item->title }}
-                            {{ $item->formFactor->id }}
+                            {{ $item->formFactor->title }}
                         </div>
                     </div>
                     <div class="action-section column-display full-width">

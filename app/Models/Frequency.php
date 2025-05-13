@@ -2,15 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FrequencyOfRandomAccessMemory extends Model
+class Frequency extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'base_frequency',
+        'title'
     ];
 
     public function randomAccessMemory() {

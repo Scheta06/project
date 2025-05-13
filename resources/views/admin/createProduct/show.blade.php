@@ -1,12 +1,17 @@
 @extends('layouts.admin-panel')
 
 @section('content')
-    <h1>Новый компонент</h1>
+    @if ($type == 'motherboards' || $type == 'random_access_memory' || $type == 'videocards')
+    <h1>Новая <span>{{$title}}</span></h1>
+    @else
+    <h1>Новый <span>{{$title}}</span></h1>
+    @endif
+
     <form action="{{ route('admin.createProduct.create', ['type' => $type]) }}" method="POST">
         @csrf
         @method('POST')
         <div class="admin-create-main">
-            <div class="admin-create-left-bar">
+            <div class="admin-create-left-bar column-display">
                 @foreach ($data as $key => $value)
                     <div class="admin-create-block column-display" style="gap: 10px">
                         <label for="{{ $key }}">{{ $value }}</label>

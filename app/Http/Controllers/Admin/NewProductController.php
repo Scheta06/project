@@ -3,17 +3,21 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\BaseController;
 use App\Models\Chipset;
+use App\Models\Cooler;
 use App\Models\ExpressVersion;
 use App\Models\FormFactor;
-use App\Models\FrequencyOfRandomAccessMemory;
+use App\Models\Frequency;
 use App\Models\MemoryCapacity;
 use App\Models\Microarchitecture;
 use App\Models\Motherboard;
 use App\Models\Processor;
 use App\Models\ProcessorGeneration;
+use App\Models\RandomAccessMemory;
 use App\Models\Socket;
+use App\Models\Storage;
 use App\Models\TypeOfMemory;
 use App\Models\Vendor;
+use App\Models\Videocard;
 use Illuminate\Http\Request;
 
 class NewProductController extends BaseController
@@ -34,6 +38,7 @@ class NewProductController extends BaseController
 
     public function show($type)
     {
+        $title = $this->configData[$type];
         $data = $this->inputConfigData[$type];
         $socket = Socket::all();
         $processorGeneration = ProcessorGeneration::all();
@@ -43,12 +48,13 @@ class NewProductController extends BaseController
         $expressVersion = ExpressVersion::all();
         $typeOfMemory = TypeOfMemory::all();
         $memoryCapacity = MemoryCapacity::all();
-        $frequency = FrequencyOfRandomAccessMemory::all();
+        $frequency = Frequency::all();
         $microarchitectures = Microarchitecture::all();
 
         return view('admin.createProduct.show', [
             'type' => $type,
             'data' => $data,
+            'title' => $title,
             'specificationArray' => [
                 'processors' => [
                     'processor_generation_id' => $processorGeneration,
@@ -64,22 +70,24 @@ class NewProductController extends BaseController
                     'vendor_id' => $vendor,
                 ],
                 'coolers' => [
-                    'vendor_id' => $vendor
+                    'vendor_id' => $vendor,
                 ],
                 'storages' => [
                     'memory_capacity_id' => $memoryCapacity,
-                    'vendor_id' => $vendor
+                    'vendor_id' => $vendor,
                 ],
                 'random_access_memory' => [
                     'memory_capacity_id' => $memoryCapacity,
-                    'frequency_id' => $frequency
+                    'frequency_id' => $frequency,
+                    'type_of_memory_id' => $typeOfMemory,
+                    'vendor_id' => $vendor,
                 ],
                 'videocards' => [
                     'microarchitecture_id' => $microarchitectures,
                     'express_version_id' => $expressVersion,
                     'memory_capacity_id' => $memoryCapacity,
                     'type_of_memory_id' => $typeOfMemory,
-                    'vendor_id' => $vendor
+                    'vendor_id' => $vendor,
                 ],
                 'psu' => [
                     'form_id' => $formFactor,
@@ -88,7 +96,7 @@ class NewProductController extends BaseController
                 'cases' => [
                     'form_id' => $formFactor,
                     'vendor_id' => $vendor,
-                ]
+                ],
             ],
         ]);
     }
@@ -115,6 +123,30 @@ class NewProductController extends BaseController
             case 'motherboards':
                 $data = $request->all();
                 Motherboard::create($data);
+                break;
+            case 'coolers':
+                $data = $request->all();
+                Cooler::create($data);
+                break;
+            case 'storages':
+                $data = $request->all();
+                Storage::create($data);
+                break;
+            case 'random_access_memory':
+                $data = $request->all();
+                RandomAccessMemory::create($data);
+                break;
+            case 'videocards':
+                $data = $request->all();
+                Videocard::create($data);
+                break;
+            case 'psu':
+                $data = $request->all();
+                Videocard::create($data);
+                break;
+            case 'cases':
+                $data = $request->all();
+                Videocard::create($data);
                 break;
         }
 

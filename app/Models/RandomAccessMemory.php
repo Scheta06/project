@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Models\Configuration;
+use Illuminate\Database\Eloquent\Model;
 
 class RandomAccessMemory extends Model
 {
@@ -11,32 +11,38 @@ class RandomAccessMemory extends Model
         'title',
         'description',
         'count_of_modules',
-    ];
-
-    protected $guarded = [
         'size_id',
         'base_frequency_id',
         'type_of_memory',
         'vendor_id',
     ];
 
-    public function configuration() {
+    protected $guarded = [
+
+    ];
+
+    public function configuration()
+    {
         return $this->hasMany(Configuration::class, 'random_access_memory_id');
     }
 
-    public function memoryCapacity() {
+    public function memoryCapacity()
+    {
         return $this->belongsTo(MemoryCapacity::class);
     }
 
-    public function frequency() {
-        return $this->belongsTo(FrequencyOfRandomAccessMemory::class);
+    public function frequency()
+    {
+        return $this->belongsTo(Frequency::class);
     }
 
-    public function typeOfMemory() {
+    public function typeOfMemory()
+    {
         return $this->belongsTo(TypeOfMemory::class);
     }
 
-    public function vendor() {
+    public function vendor()
+    {
         return $this->belongsTo(Vendor::class);
     }
 }

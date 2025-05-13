@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('memory_capacities', function (Blueprint $table) {
             $table->id();
-            $table->integer('capacity');
+            $table->integer('title');
             $table->timestamps();
         });
     }

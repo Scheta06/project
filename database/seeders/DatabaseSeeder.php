@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Frequency;
 use Illuminate\Database\Seeder;
 use Database\Seeders\RoleSeeder;
 
@@ -27,7 +28,7 @@ class DatabaseSeeder extends Seeder
             FormFactorSeeder::class,
             MemoryCapacitySeeder::class,
             ProcessorGenerationSeeder::class,
-            FrequencyOfRAMSeeder::class,
+            FrequencySeeder::class,
             ProcessorSeeder::class,
             MotherboardSeeder::class,
             CoolerSeeder::class,

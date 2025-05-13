@@ -19,7 +19,7 @@ return new class extends Migration
 
 
             $table->foreignId('memory_capacity_id')->references('id')->on('memory_capacities')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreignId('frequency_id')->references('id')->on('frequency_of_random_access_memories')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('frequency_id')->references('id')->on('frequencies')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('type_of_memory_id')->references('id')->on('type_of_memories')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('vendor_id')->references('id')->on('vendors')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();

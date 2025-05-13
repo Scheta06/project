@@ -11,11 +11,13 @@ class Socket extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
         'title'
     ];
 
-    protected $guarded = [];
+    protected $hidden = [
+        'id'
+    ];
+
 
     public function proccessor() {
         return $this->hasMany(Processor::class, 'socket_id');
